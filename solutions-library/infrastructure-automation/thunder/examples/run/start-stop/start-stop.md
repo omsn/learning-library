@@ -1,8 +1,9 @@
 # Start/Stop/Reboot instances
+
+## Introduction
 This solution will start/stop/reboot instances
 
-
-### Python scripts
+## Python scripts
 Prerequisites:
   * Install Python3.6 -> sudo yum install python36 -y
   * Install setup tools -> sudo yum install python36-setuptools
@@ -21,8 +22,10 @@ tenancy=ocid1.tenancy.oc1..aaaaaaaaksusyefovxt64bsovu523r5ez6qz25pcnqjw2a243qjmf
 region=us-ashburn-1
 ```
 
-#### Stop/Start Instances
+## Stop/Start Instances
 Based on a compartment that you would pass to the script and the region from the config file (you can also pass this one to the script in order to overwrite the config value), all the instances from that compartment and region will receive a reboot command (STOP/START).
+
+Go to thunder -> examples -> run -> start-stop
 
 Examples of running the code:
 ```

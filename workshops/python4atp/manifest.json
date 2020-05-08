@@ -1,53 +1,30 @@
+
 {
     "tutorials": [
         {         
-            "title": "Read Me First",
-            "description": "",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "10/31/2019",
-            "contentid": "12nnnn",
-            "filename": "README.md"
+            "title": "Introduction",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/python-on-atp/intro/intro.md"
+        },  {         
+            "title": "Lab 0: Login to Oracle Cloud",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-ssworkshop.md"
         },
         {         
-            "title": "Lab 050: Setup Cloud Environment",
-            "description": "",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "10/31/2019",
-            "contentid": "12nnnn",
-            "filename": "LabGuide050.md"
+            "title": "Lab 1: Setup",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/python-on-atp/setup/setup.md"
         },
         {         
-            "title": "Lab 100: Load and Access Data",
-            "description": "",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "10/31/2019",
-            "contentid": "12nnnn",
-            "filename": "LabGuide100.md"
+            "title": "Lab 2: Build and test python REST service",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/python-on-atp/rest-service/rest-service.md"
         },
         {         
-            "title": "Lab 200: Build and test python REST Service",
-            "description": "",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "10/31/2019",
-            "contentid": "12nnnn",
-            "filename": "LabGuide200.md"
+            "title": "Lab 3: Plot data and show nearest service provider on map",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/python-on-atp/plot-customers/plot-customers.md"
         },
         {         
-            "title": "Lab 300: Plot data and show nearest service provider on map",
-            "description": "",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "10/31/2019",
-            "contentid": "12nnnn",
-            "filename": "LabGuide300.md"
-        },
-        {         
-            "title": "Lab 400: Show customers based on regions",
-            "description": "",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "10/31/2019",
-            "contentid": "12nnnn",
-            "filename": "LabGuide400.md"
+            "title": "Lab 4: Show customers based on regions",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/python-on-atp/show-customers/show-customers.md"
         }
 
     ]
 }
+

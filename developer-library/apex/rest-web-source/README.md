@@ -12,7 +12,7 @@ This lab REST enables database objects, and then uses those REST endpoints as th
 * Define Web Source Modules against REST endpoints
 * Build an application utilizing Web SOurce Modules
 
-*{Note: This lab assumes you are using Oracle APEX 19.2.}*
+*{Note: This lab assumes you are using Oracle APEX 20.1.}*
 
 ## Lab Modules
 

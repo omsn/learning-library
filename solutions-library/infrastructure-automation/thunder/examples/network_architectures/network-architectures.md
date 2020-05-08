@@ -1,16 +1,7 @@
 # Network Architectures
 
-This segment of the crawl, walk, run framework provides a standard baseline for best practices around networking architecture. These three (for now) models will provide a great starting point for enterprise customers who are looking to prep their business for OCI. 
-
-## Dependencies
-
-- OCI Tenancy
-- Workstation with Terraform installed or quickly spin up [Oracle Cloud Developer Image](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/54030984) from OCI Marketplace **_available directly through Console_**
-
-
-## Getting Started
-
-Before working through the examples, set up a config file with the required credentials on your Workstation or Instance described in Dependencies. See [SDK and Tool Configuration](https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/sdkconfig.htm) for instructions.
+## Introduction
+This segment of the framework provides a standard baseline for best practices around networking architecture. These three (for now) models will provide a great starting point for enterprise customers who are looking to prep their business for OCI. 
 
 ## N-Tier Webapp Architecture
 
@@ -44,7 +35,7 @@ provider_oci = {
 
 ## Running the code
 
-In order to run the code, you will simply have to go to the directory containing the desired architecture you want to create (e.g thunder/examples/network_architectures/saas\_isolated\_arch) and do the following:
+In order to run the code, you will simply have to go to the directory containing the desired architecture you want to create (e.g **thunder/examples/network_architectures/saas\_isolated\_arch**) and do the following:
 
 ```
 # Run init to get terraform modules

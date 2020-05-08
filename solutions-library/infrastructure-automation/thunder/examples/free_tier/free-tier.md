@@ -1,8 +1,6 @@
 # Always Free Resources
 
 ## Introduction
-In order to be able to spin up the always free resources, you will have to navigate to thunder -> examples -> free_tier.
-
 In this example, only always free resources are created:
 * 1 Compute Instance (having a Micro shape)
 * 1 Autonomous Transaction Processing DB
@@ -17,6 +15,7 @@ In this example, only always free resources are created:
 Don't forget to populate the provider with the details of your tenancy as specified in the prerequisites lab.
 
 ## Running the code
+In order to be able to spin up the always free resources, you will have to navigate to **thunder -> examples -> free_tier**.
 
 From the free tier folder you can run the following commands:
 ```

@@ -15,7 +15,7 @@ In the future, rather than emailing spreadsheets around to gather information, y
 * Improve the Search and Report pages
 * Link pages
 
-*{Note: This lab assumes you are using Oracle APEX 19.2.}*
+*{Note: This lab assumes you are using Oracle APEX 20.1.}*
 
 ## Lab Modules
 

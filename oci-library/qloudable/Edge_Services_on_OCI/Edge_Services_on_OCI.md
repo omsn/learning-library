@@ -73,10 +73,7 @@ In this lab, we will learn how to use OCI DNS Traffic Management service to ensu
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
-
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -362,7 +359,7 @@ Click **Add new**
 
 - **SUBDOMAIN** : Use your user name
 - **COMPARTMENT** : ocispl24(root)
-- **ZONE** : Use the drop down and choose **Ocispl24.com**
+- **ZONE** : Use the drop down and choose **ocispl24.com**
 
 3. Click **Create Policy**
 
@@ -378,7 +375,7 @@ Click **Add new**
 
 6. Launch a new browser tab, open up the domain specified in your traffic policy(for webserver1) and you will be directed to the webserver1
 
-**http://<YOUR_USER_NAME>Ocispl24.com**
+**http://<YOUR_USER_NAME>.ocispl24.com**
 
 **NOTE : <YOUR_USER_NAME> is what was specified as the sub domain**
 
@@ -454,11 +451,10 @@ appear.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
-8. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text">
 
-9. Navigate to **Health Checks** page, click your Health Check name and in Health Check details page, Click **Delete**
+8. Navigate to **Health Checks** page, click your Health Check name and in Health Check details page, Click **Delete**
 
 
 ***Congratulations! You have successfully completed the lab. ***

@@ -1,4 +1,6 @@
 # Grafana automation
+
+## Introduction
 This project will build Grafana environment using terraform automation.
 
 ## Prerequisites
@@ -32,7 +34,7 @@ provider_oci = {
 }
 ```
 
-### Grafana
+## Grafana
 
 This module creates an instance, a dynamic group and an instance principal. It is also installing and configuring Grafana to use oci datasource. Grafana is using the OCI Metrics dashboard in order to be able to monitor the different component from OCI.
 
@@ -50,24 +52,24 @@ The variables for this module are described bellow:
 
 *instance_params*
 
-* ad (the availability domain of the instance)
-* shape (the shape of the instance)
-* hostname (the hostname of the instance)
-* assign_public_ip (set to true in order to have a public ip, false otherwise)
-* boot_volume_size (the boot volume size of the instance's boot volume)
-* source_type (should be set to image)
-* source_id (the image ocid)
-* preserve_boot_volume (set to 1 if you want to preserve the boot volume after the instance deletion, 0 otherwise)
-* subnet_id (a public subnet where instance will be created - the security lists needs to have port 3000 opened)
-* compartment_id (compartmend ocid where the instance will be created)
+  * ad (the availability domain of the instance)
+  * shape (the shape of the instance)
+  * hostname (the hostname of the instance)
+  * assign\_public\_ip (set to true in order to have a public ip, false otherwise)
+  * boot\_volume\_size (the boot volume size of the instance's boot volume)
+  * source_type (should be set to image)
+  * source_id (the image ocid)
+  * preserve\_boot\_volume (set to 1 if you want to preserve the boot volume after the instance deletion, 0 otherwise)
+  * subnet_id (a public subnet where instance will be created - the security lists needs to have port 3000 opened)
+  * compartment_id (compartmend ocid where the instance will be created)
 
-*ssh_public_key* - the public ssh key path used for connecting to the instance
+*ssh\_public\_key* - the public ssh key path used for connecting to the instance
 
-*ssh_private_key* - the private ssh key path used for connecting to the instance
+*ssh\_private\_key* - the private ssh key path used for connecting to the instance
 
 *home_region* - Home region for tenancy
 
-*instance_principal_params*
+*instance\_principal\_params*
 
 * dg_description (The description of the dynamic group)
 * dg_name (The name of the dynamic group)
@@ -78,7 +80,7 @@ The variables for this module are described bellow:
 ### Running the code
 
 
-Go to the root directory of the repository:
+Go to thunder->examples->run->grafana of the repository:
 
 ```
 # Run init to get terraform modules
@@ -99,4 +101,4 @@ $ terraform destroy
 **At the moment, there are no known issues**
 
 ## Utils
-https://grafana.com/blog/2019/02/25/oracle-cloud-infrastructure-as-a-data-source-for-grafana/
+[Grafana on OCI](https://grafana.com/blog/2019/02/25/oracle-cloud-infrastructure-as-a-data-source-for-grafana/)

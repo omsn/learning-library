@@ -177,4 +177,4 @@ Congratulations!  Now you have the environment to run the Multitenant labs.
 - **Author** - Kay Malcolm, Director, DB Product Management
 - **Last Updated By/Date** - Kay Malcolm, Director, DB Product Management, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 

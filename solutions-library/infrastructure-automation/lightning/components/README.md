@@ -9,7 +9,7 @@ that creates all the required resources and configures the application on the cr
 
 ## Topology
 
-![Lightning Free Topology](../img/lightning-free-topology.png)
+![Lightning Free Topology](../images/lightning-free-topology.png)
 
 
 ### Components

@@ -1,28 +1,68 @@
 # DNS Examples
 
-Below there is a simple example of how to create DNS zones and records.
+
+## Introduction
+
+The Oracle Cloud Infrastructure Domain Name System (DNS) service lets you create and manage your DNS zones. You can create zones, add records to zones, and allow Oracle Cloud Infrastructure's edge network to handle your domain's DNS queries.
 
 ## Description
 
 The terraform module uses the following variables:
 
 * Zone Parameters
-  * compartment_name - The name of the compartment
-  * zone_name - The name of the zone
-  * zone_type - The type of the zone (PRIMARY or SECONDARY)
-  * external_masters - External master servers for the zone. externalMasters becomes a required parameter when the zoneType value is SECONDARY
-    * ip - The ip of the external master
+    * compartment_name - The name of the compartment
+    * zone_name - The name of the zone
+    * zone_type - The type of the zone (PRIMARY or SECONDARY)
+    * external_masters - External master servers for the zone. externalMasters becomes a required parameter when the zoneType value is SECONDARY
+      * ip - The ip of the external master
 
 * DNS Records Params
-  * zone_name - The name of the zone
-  * domain - The domain of the record type
-  * rtype - The record type (e.g A)
-  * ttl - The Time To Live for the record, in seconds.
-  * use_instance - If it is set to true, you will use an instance from the list of instances as a dns record
-  * instance_name - Set it to the name of the instance if use_instance is true, otherwise set it to null
-  * use_lb - If it is set to true, you will use a load balancer from the list of load balancers as a dns record
-  * lb_name - Set it to the name of the load balancer if use_lb is true, otherwise set it to null
-  * rdata - If use_instance and use_lb are set to false, you can provide a manual input for rdata
+    * zone_name - The name of the zone
+    * domain - The domain of the record type
+    * rtype - The record type (e.g A)
+    * ttl - The Time To Live for the record, in seconds.
+    * use_instance - If it is set to true, you will use an instance from the list of instances as a dns record
+    * instance\_name - Set it to the name of the instance if use\_instance is true, otherwise set it to null
+    * use_lb - If it is set to true, you will use a load balancer from the list of load balancers as a dns record
+    * lb\_name - Set it to the name of the load balancer if use\_lb is true, otherwise set it to null
+    * rdata - If use\_instance and use\_lb are set to false, you can provide a manual input for rdata
+
+## Dependencies
+Apart from the **provider.auto.tfvars**, there may be some other dependencies in the **terraform.tfvars** file that you will have to address.
+All the dependencies from this section should have resources that already exist in OCI.
+
+### Compartment Dependency
+In order to be able to run the sample code, you will have to prepare a map variable (like in the **terraform.tfvars** file) called **compartment\_ids**, which will hold key/value pairs with the names and ids of the compartments that you want to use.
+This variable will be external in order to offer multiple ways of linking them from a terraform perspective.
+
+```
+compartment_ids = {
+  sandbox = "ocid1.compartment.oc1..aaaaaaaaiu3vfcpbjwwgpil3xakqts4jhtjq42kktmisriiszdvvouwsirgq"
+}
+```
+
+### Instance Dependency
+In order to be able to run the sample code, you will have to prepare a map variable (like in the **terraform.tfvars** file) called **private\_ip\_instances**, which will hold key/value pairs with the names and private_ips of the instances that you want to use.
+This variable will be external in order to offer multiple ways of linking them from a terraform perspective.
+
+```
+private_ip_instances = {
+  hur1 = "10.0.1.3"
+}
+```
+
+### Load Balancer Dependency
+In order to be able to run the sample code, you will have to prepare a map variable (like in the **terraform.tfvars** file) called **load\_balancer\_params**, which will hold key/value pairs with the names, lb_ids and comp_ids of the load_balancers that you want to use.
+This variable will be external in order to offer multiple ways of linking them from a terraform perspective.
+
+```
+load_balancer_params = {
+  hur-lb = {
+    lb_id              = "ocid1.loadbalancer.oc1.eu-frankfurt-1.aaaaaaaah24kceloiufpn7qffdcqmtjcmfykubempro5ial2ihti26ubhyzq"
+    comp_id            = "ocid1.compartment.oc1..aaaaaaaaiu3vfcpbjwwgpil3xakqts4jhtjq42kktmisriiszdvvouwsirgq"
+  }
+}
+```
 
 ## Example
 
@@ -109,21 +149,25 @@ This is just an example, but the number of the resources can be increased/decrea
 
 Don't forget to populate the provider with the details of your tenancy as specified in the main README.md file.
 
+
 ## Running the code
 
+Go to **thunder/examples/walk/dns**
 ```
 # Run init to get terraform modules
 $ terraform init
 
 # Create the infrastructure
-$ terraform apply
+$ terraform apply --var-file=path_to_provider.auto.tfvars
 
 # If you are done with this infrastructure, take it down
-$ terraform destroy
+$ terraform destroy --var-file=path_to_provider.auto.tfvars
 ```
 
 
 ## Useful links
-https://docs.cloud.oracle.com/iaas/Content/DNS/Concepts/dnszonemanagement.htm
-https://www.terraform.io/docs/providers/oci/r/dns_zone.html
-https://www.terraform.io/docs/providers/oci/r/dns_record.html
+[DNS Zone Management](https://docs.cloud.oracle.com/iaas/Content/DNS/Concepts/dnszonemanagement.htm)
+
+[Terraform DNS Zone](https://www.terraform.io/docs/providers/oci/r/dns_zone.html)
+
+[Terraform DNS Record](https://www.terraform.io/docs/providers/oci/r/dns_record.html)

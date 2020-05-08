@@ -71,6 +71,14 @@
             "publisheddate": "04/01/2020",
             "contentid": "12nnnn",
             "filename": "../examples/network_architectures/network-architectures.md"
+        },
+        {         
+            "title": "Lab 9: Custom Images",
+            "description": "Custom Images",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "04/01/2020",
+            "contentid": "12nnnn",
+            "filename": "../examples/custom_images/custom-images.md"
         }
     ]
 }

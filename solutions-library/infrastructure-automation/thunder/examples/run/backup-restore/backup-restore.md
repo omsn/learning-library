@@ -1,8 +1,9 @@
 # Backup and restore
+
+## Introduction
 This solution will backup and restore boot and block volumes in OCI.
 
-
-### Python scripts
+## Python scripts
 Prerequisites:
   * Install Python3.6 -> sudo yum install python36 -y
   * Install setup tools -> sudo yum install python36-setuptools
@@ -21,13 +22,14 @@ tenancy=ocid1.tenancy.oc1..aaaaaaaaksusyefovxt64bsovu523r5ez6qz25pcnqjw2a243qjmf
 region=us-ashburn-1
 ```
 
-#### Backup and Restore
+## Backup and Restore
 
-##### Backup
+### Backup
 Based on a compartment that you would pass to the script and the region from the config file (you can also pass this one to the script in order to overwrite the config value), volume groups will be created for each of the instances in that compartment.
 Based on those volume groups, volume group backups are getting created at every run. If the volume groups exist from a prior run, the script won't recreate them, but new backups will be created.
 The script has also the ability of deleting old volume groups older than x days, where x is an argument you will give to the script.
 
+Go to thunder -> examples -> run -> backup-restore
 Examples of running the code:
 ```
 
@@ -51,7 +53,7 @@ $ python3.6 backup.py -compartment comp_name -delete_volume_group_backups -delet
 
 ```
 
-##### Restore
+### Restore
 
 **Restore an entire volume group**
 * Go to the OCI Console and login.

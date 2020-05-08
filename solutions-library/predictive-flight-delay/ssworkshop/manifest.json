@@ -1,52 +1,40 @@
 {
     "tutorials": [
         {         
-            "title": "Introduction and Overview",
-            "description": "Introduction to Multitenant Workshop",
-            "partnumber": "Ennnnn_01",
+            "title": "Workshop Introduction",
             "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
             "filename": "../intro/intro.md"
         },
         {         
-            "title": "Lab: Generate SSH Key",
-            "description": "Generate SSH Key",
-            "partnumber": "Ennnnn_01",
+            "title": "Lab1: Generate SSH Key",
             "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/common-labs/generate-ssh-key/generate-ssh-key.md"
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-ssworkshop.md"
         },
         {         
-            "title": "Lab: Login to Oracle Cloud",
-            "description": "Login to Oracle Cloud",
-            "partnumber": "Ennnnn_01",
+            "title": "Lab2: ADW and OML User",
             "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/common-labs/cloud-login/cloud-login-ssworkshop.md"
+            "filename": "../adw-oml-provision/adw-oml-provision.md"
         },
         {         
-            "title": "Lab: Workshop Setup",
-            "description": "Setup Multitenant Workshop in Self Service Workshop",
-            "partnumber": "Ennnnn_01",
+            "title": "Lab3: ADW and Sql Developer",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "./../setup/ssworkshop-setup.md"
+            "filename": "./../adw-sqldeveloper/adw-sqldeveloper.md"
         },
         {         
-            "title": "Lab: Multitenant Basics",
-            "description": "Clone, Plug and Drop Pluggable Databases",
-            "partnumber": "Ennnnn_01",
+            "title": "Lab4: OAC and Machine Learning",
             "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "./../clone-plug-drop/clone-plug-drop.md"
+            "filename": "./../oac-machinelearning/oac-machinelearning.md"
         },
         {         
-            "title": "Lab: Application Containers",
-            "description": "Using Application Containers with Multitenant",
-            "partnumber": "Ennnnn_01",
+            "title": "Lab5: OML and Machine Learning",
             "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "./../app-containers/app-containers.md"
+            "filename": "./../oml-machinelearning/oml-machinelearning.md"
+        },
+        {         
+            "title": "Lab6: OAC Visualization",
+            "publisheddate": "03/10/2020",
+            "filename": "./../oac-visualization/oac-visualization.md"
         }
     ]
 }

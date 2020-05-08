@@ -1,8 +1,32 @@
 {
     "tutorials": [
-          {
-            "title": "Create an Oracle Cloud Infrastructure VM Database",
-            "filename": "create-oci-vm-db.md"
+      {
+        "title": "Introduction",
+        "filename": "introduction/intro.md"
+      },
+      {
+        "title": "Sign Up for Free Trial",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/register-free-tier-account.md"
+      },
+      {
+        "title": "Create SSH Keys",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key/generate-ssh-keys.md"
+      },
+      {
+        "title": "Create a Virtual Cloud Network",
+        "filename": "create-virtual-cloud-network/create-virtual-cloud-network.md"
+      },
+      {
+        "title": "Create an Oracle Cloud Infrastructure VM Database",
+        "filename": "create-oci-vm-db/create-oci-vm-db.md"
+      },
+      {
+          "title": "Optional: Add an Ingress Rule to Open Access to the DB",
+          "filename": "add-ingress-rule/add-ingress-rule.md"
+        },
+        {
+          "title": "Optional: Connect SQL Developer to an Oracle Cloud Infrastructure VM Database",
+          "filename": "connect-oci-vm-db-sqldeveloper/connect-oci-vm-db-sqldeveloper.md"
         }
     ]
 }

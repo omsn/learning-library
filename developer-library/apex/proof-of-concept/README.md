@@ -18,7 +18,7 @@ components to improve the initial app.
 * Create an application on the new data structures
 * Refine the application
 
-*{Note: This lab assumes you are using Oracle APEX 19.2.}*
+*{Note: This lab assumes you are using Oracle APEX 20.1.}*
 
 ## Lab Modules
 

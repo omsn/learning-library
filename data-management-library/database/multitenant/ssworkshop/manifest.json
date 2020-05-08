@@ -24,13 +24,11 @@
             "contentid": "12nnnn",
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key/generate-ssh-keys.md"
         },
-        {         
-            "title": "Lab 3: Workshop Setup",
-            "description": "Setup Multitenant Workshop in Self Service Workshop",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "./../setup/ssworkshop-setup.md"
+        {            
+            "title": "Lab 3: Environment Setup",
+            "description": "Setup compute instance running 19c using Terraform script and Resource Manager",
+            "publisheddate": "3/24/2020",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/setup-compute/setup-19c-ssworkshop.md"
         },
         {         
             "title": "Lab 4: Multitenant Basics",

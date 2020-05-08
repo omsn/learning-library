@@ -1,4 +1,6 @@
 # KMS
+
+## Introduction
 OCI KMS (Key Management Service) provides centralized management of data encryption.
 
 Encryption keys can be used for various services in OCI and can be of 2 types:
@@ -55,52 +57,52 @@ The KMS module is used for creating vaults, keys and key versions. After that, t
 * Object Storage Service
 
 * Vault parameters
-  * compartment_name - The compartment name in which the vault will be created
-  * display_name - The name of the vault
-  * vault_type - The vault type. Currently, 2 types are available: VIRTUAL (the DEFAULT value) and VIRTUAL_PRIVATE
+    * compartment_name - The compartment name in which the vault will be created
+    * display_name - The name of the vault
+    * vault\_type - The vault type. Currently, 2 types are available: VIRTUAL (the DEFAULT value) and VIRTUAL\_PRIVATE
 
 * Key parameters
-  * compartment_name - The compartment name in which the key will be created
-  * display_name - The name of the key
-  * vault_name -  The vault name in which the key will be created
-  * key_shape_algorithm - the encryption algorithm for which we can use the key. Currently, only AES can be used
-  * key_shape_size_in_bytes - the size of the key exprimated in bytes. Currently, 3 values can be used: 
-  16 (for 128 bits), 24 (for 192 bits), 32 (for 256 bits)
-  * rotation_version - whenever this number is increased, the key will be rotated. First value should be 0 in normal situations
+    * compartment_name - The compartment name in which the key will be created
+    * display_name - The name of the key
+    * vault_name -  The vault name in which the key will be created
+    * key\_shape\_algorithm - the encryption algorithm for which we can use the key. Currently, only AES can be used
+    * key\_shape\_size\_in\_bytes - the size of the key exprimated in bytes. Currently, 3 values can be used: 
+    16 (for 128 bits), 24 (for 192 bits), 32 (for 256 bits)
+    * rotation_version - whenever this number is increased, the key will be rotated. First value should be 0 in normal situations
 
-To use a key with a specific resource / service (boot volume, block volume, File System Service, Object Storage Service) you just have to update the **kms_key_name** from the definition of that resource / service (instance_params, bv_params, win_instance_params, )
+To use a key with a specific resource / service (boot volume, block volume, File System Service, Object Storage Service) you just have to update the **kms\_key\_name** from the definition of that resource / service (instance\_params, bv\_params, win\_instance\_params, )
 
 ## Example
 In the provided example, the following resources are created:
 
 * 1 Linux Instance
-  * it has 2 block volumes attached to it
-  * the boot volume is encrypted using a kms key
-  * 1 block volume is encrypted using a kms key
-  * 1 block volume is encrypted using an Oracle-managed key (no KMS)
+    * it has 2 block volumes attached to it
+    * the boot volume is encrypted using a kms key
+    * 1 block volume is encrypted using a kms key
+    * 1 block volume is encrypted using an Oracle-managed key (no KMS)
 
 * 1 Windows Instance
-  * it has 2 block volumes attached to it
-  * the boot volume is encrypted using a kms key
-  * 1 block volume is encrypted using a kms key
-  * 1 block volume is encrypted using an Oracle-managed key (no KMS)
+    * it has 2 block volumes attached to it
+    * the boot volume is encrypted using a kms key
+    * 1 block volume is encrypted using a kms key
+    * 1 block volume is encrypted using an Oracle-managed key (no KMS)
 
 * 1 FSS (File System Service)
-  * the file system is encrypted using a KMS key
-  * it has 2 mount targets
-  * export options can be set on mount targets
+    * the file system is encrypted using a KMS key
+    * it has 2 mount targets
+    * export options can be set on mount targets
 
 * 1 OSS (Object Storage Service)
-  * it has a bucket definition
-  * the bucket is encrypted using a KMS key
+    * it has a bucket definition
+    * the bucket is encrypted using a KMS key
 
 * 1 KMS vault
-  * the type is the DEFAULT one which is also called VIRTUAL. The alternative is VIRTUAL_PRIVATE
+    * the type is the DEFAULT one which is also called VIRTUAL. The alternative is VIRTUAL_PRIVATE
 
 * 3 KMS keys
-  * they are located in the same vault
-  * they have different shapes (AES-128, AES-192, AES-256) and can have multiple versions
-  * they are used for encrypting different resources / services (boot volumes, block volumes, FSS, OSS)
+    * they are located in the same vault
+    * they have different shapes (AES-128, AES-192, AES-256) and can have multiple versions
+    * they are used for encrypting different resources / services (boot volumes, block volumes, FSS, OSS)
 
 The example is based on terraform.tfvars values:
 ```
@@ -285,6 +287,7 @@ key_params = {
 
 ## Running the code
 
+Go to thunder->examples->run->kms
 ```
 # Run init to get terraform modules
 $ terraform init
@@ -297,10 +300,13 @@ $ terraform destroy
 ```
 
 ## Useful Links
-* https://docs.cloud.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm
-* https://docs.cloud.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/assigningkeys.htm
-* https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Concepts/commonpolicies.htm#os-bv-admins-use-key-id
-* https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Concepts/commonpolicies.htm#services-use-key
+[Key Overview](https://docs.cloud.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm)
+
+[Assigning Keys](https://docs.cloud.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/assigningkeys.htm)
+
+[Use Keys](https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Concepts/commonpolicies.htm#os-bv-admins-use-key-id)
+
+[Services Use Keys](https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Concepts/commonpolicies.htm#services-use-key)
 
 ## Known issues
 In case you have keys with rotation_version greater than 0, you might get an error of this type while destroying KMS resources:

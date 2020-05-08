@@ -15,7 +15,7 @@ This lab walks you through creating an application based on existing tables in y
 * Learn how to manipulate regions, and items
 * Learn how to define client-side interactivity declaratively
 
-*{Note: This lab assumes you are using Oracle APEX 19.2.}*
+*{Note: This lab assumes you are using Oracle APEX 20.1.}*
 
 ## Lab Modules
 

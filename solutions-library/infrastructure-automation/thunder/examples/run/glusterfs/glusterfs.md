@@ -1,11 +1,10 @@
 # GlusterFS
 
+## Introduction
 This project will build GlusterFS infrastructure using terraform both georeplicated and simple volumes.
 
 ## Prerequisites
 * Terraform v0.12.12 or greater <https://www.terraform.io/downloads.html>
-
-### Assumptions
 * The networking components should already exist (VCN, route tables, etc.)
 * The compartment(s) should already exist
 * You will need to have ssh connectivity from the instance you are running the code to the glusterfs nodes that will be provisioned by it
@@ -29,7 +28,7 @@ You will also need to generate an OpenSSH public key pair in order for you and t
 
 
 ## GlusterFS Examples
-There is a folder in the root directory called **examples**.
+There is a folder in thunder->examples->run->glusterfs called **examples**.
 In the **examples** folder there are two sub-folders containing different instantiations of simple glusterfs volumes and geo-replicated glusterfs volumes.
 The simple glusterfs volumes will have all the servers created in the same region, and the geo-replicated volumes will have servers created in a DR region.
 For geo-replication, when you create a volume in one of the regions, the other one should be identical in order to avoid inconsistencies.
@@ -47,7 +46,7 @@ provider_oci = {
 }
 ```
 
-Apart from that, you should also modify the paths to the ssh public and private keys and also the **comp_id** and **subnet_id** of the **instance_params** variable and **instance_params_2** variable in case you are using geo-replication.
+Apart from that, you should also modify the paths to the ssh public and private keys and also the **comp\_id** and **subnet\_id** of the **instance\_params** variable and **instance\_params\_2** variable in case you are using geo-replication.
 
 ```
 ssh_public_key  = "/home/opc/.ssh/id_rsa.pub"
@@ -73,9 +72,9 @@ instance_params = {
 }
 ```
 
-In the above example, there are two instances created called **gfstest1** and **gfstest2**. You can increase the number of instances easily, by adding another map in the **instance_params** variable.
+In the above example, there are two instances created called **gfstest1** and **gfstest2**. You can increase the number of instances easily, by adding another map in the **instance\_params** variable.
 
-The links between the instances and the block volumes are made by the instances names based on the **instance_name** parameter in the **bv_params** variable.
+The links between the instances and the block volumes are made by the instances names based on the **instance\_name** parameter in the **bv\_params** variable.
 
 ```
 bv_params = {
@@ -92,11 +91,11 @@ bv_params = {
 }
 ```
 
-In the above example, there are two block volumes created called **gfstest11** and **gfstest21**. You can increase the number of block volumes easily, by adding another map in the **bv_params** variable.
+In the above example, there are two block volumes created called **gfstest11** and **gfstest21**. You can increase the number of block volumes easily, by adding another map in the **bv\_params** variable.
 
 All other parameters can be modified (names, shapes, ad, etc.)
 
-Every example has a **gluster_params** variable which contains the volume type and the replica count (for distributed volumes the replica will be set to an empty string, due to the fact that a distributed volume does not use any replicas).
+Every example has a **gluster\_params** variable which contains the volume type and the replica count (for distributed volumes the replica will be set to an empty string, due to the fact that a distributed volume does not use any replicas).
 
 ```
 gluster_params = {
@@ -106,44 +105,43 @@ gluster_params = {
 ```
 
 
-
 ### Distributed
 A distributed volume will split all the files between the bricks that are contained in a glusterfs volume.
 For example, if you have 2 bricks in your volume (brickA, brickB) and you create two files, fileA and fileB, they will be split between the two bricks (brickA will have fileA, brickB will have fileB)
 
 #### Simple Distributed
-In the examples->glusterfs_volume->distributed there is a simple glusterfs volume instantiation that contains 2 servers, each of them having one brick attached.
+In the examples->glusterfs\_volume->distributed there is a simple glusterfs volume instantiation that contains 2 servers, each of them having one brick attached.
 
 #### Geo-Replicated Distributed
-In the examples->georeplicated_glusterfs_volume->distributed there is a geo-replicated glusterfs volume instantiation that contains 2 servers per region, each of them having one brick attached.
+In the examples->georeplicated\_glusterfs\_volume->distributed there is a geo-replicated glusterfs volume instantiation that contains 2 servers per region, each of them having one brick attached.
 Basically, there will be 2 master nodes and 2 slave nodes and they will have a 1-1 relationship (If you create a file, it will also be copied to one of the slave bricks, even though this is a distributed glusterfs volume).
 
 
 
 ### Replicated
-A replicated volume mirrors the files based on the replica number that is set in **gluster_params**
+A replicated volume mirrors the files based on the replica number that is set in **gluster\_params**
 For example, if you have three bricks and a replica set to three and you create a file, that file will be added to all of the bricks. 
 
 #### Simple Replicated
-In the examples->glusterfs_volume->replicated there is a simple glusterfs volume instantiation that contains 2 servers, each of them having one brick attached.
+In the examples->glusterfs\_volume->replicated there is a simple glusterfs volume instantiation that contains 2 servers, each of them having one brick attached.
 
 #### Geo-Replicated Replicated
-In the examples->georeplicated_glusterfs_volume->replicated there is a geo-replicated glusterfs volume instantiation that contains 2 servers per region, each of them having one brick attached.
+In the examples->georeplicated\_glusterfs\_volume->replicated there is a geo-replicated glusterfs volume instantiation that contains 2 servers per region, each of them having one brick attached.
 Basically, there will be 2 master nodes and 2 slave nodes and they will have a many to many relationship (If you create a file, it will be copied to all of the bricks).
 
 
 
 ### Distributed Replicated
-A distributed replicated volume mirrors the files based on the replica number that is set in **gluster_params**
+A distributed replicated volume mirrors the files based on the replica number that is set in **gluster\_params**
 For example, if you have four bricks and a replica set to two and you create a file, that file will be added to two of the bricks.
 
 In both of the examples you will initially obtain a **Replicated** volume, but if you add more bricks based on the replica count, you will be able to obtain a true distributed replicated volume.
 
 #### Simple Distributed Replicated
-In the examples->glusterfs_volume->distributed_replicated there is a simple glusterfs volume instantiation that contains 2 servers, each of them having one brick attached.
+In the examples->glusterfs\_volume->distributed\_replicated there is a simple glusterfs volume instantiation that contains 2 servers, each of them having one brick attached.
 
 #### Geo-Replicated Distributed Replicated
-In the examples->georeplicated_glusterfs_volume->distributed_replicated there is a geo-replicated glusterfs volume instantiation that contains 2 servers per region, each of them having one brick attached.
+In the examples->georeplicated\_glusterfs\_volume->distributed\_replicated there is a geo-replicated glusterfs volume instantiation that contains 2 servers per region, each of them having one brick attached.
 Basically, there will be 2 master nodes and 2 slave nodes and they will have a many to many relationship (If you create a file, it will be copied to all of the bricks).
 
 
@@ -156,19 +154,18 @@ Similar to RAID 5.
 In the examples->glusterfs_volume->dispersed there is a simple glusterfs volume instantiation that contains 3 servers, each of them having one brick attached.
 
 #### Geo-Replicated Dispersed (unstable)
-In the examples->georeplicated_glusterfs_volume->dispersed there is a geo-replicated glusterfs volume instantiation that contains 3 servers per region, each of them having one brick attached.
+In the examples->georeplicated\_glusterfs\_volume->dispersed there is a geo-replicated glusterfs volume instantiation that contains 3 servers per region, each of them having one brick attached.
 Basically, there will be 3 master nodes and 3 slave nodes and they will have a many to many relationship (If you create a file, chunks of it will be copied to all of the bricks).
-
 
 
 ### Distributed Dispersed
 Distributed dispersed volumes are the equivalent to distributed replicated volumes, but using dispersed subvolumes instead of replicated ones. When you create a distributed dispersed volume, the number of bricks specified in the **terraform.tfvars** must be a multiple of the replica number.
 
 #### Simple Distributed Dispersed
-In the examples->glusterfs_volume->distributed_dispersed there is a simple glusterfs volume instantiation that contains 3 servers, each of them having one brick attached.
+In the examples->glusterfs\_volume->distributed\_dispersed there is a simple glusterfs volume instantiation that contains 3 servers, each of them having one brick attached.
 
 #### Geo-Replicated Distributed Dispersed (unstable)
-In the examples->georeplicated_glusterfs_volume->distributed_dispersed there is a geo-replicated glusterfs volume instantiation that contains 3 servers per region, each of them having one brick attached.
+In the examples->georeplicated\_glusterfs\_volume->distributed\_dispersed there is a geo-replicated glusterfs volume instantiation that contains 3 servers per region, each of them having one brick attached.
 Basically, there will be 3 master nodes and 3 slave nodes and they will have a many to many relationship (If you create a file, chunks of it will be copied to all of the bricks).
 
 
@@ -199,11 +196,11 @@ $ terraform destroy
 For NFS please consult the following: https://docs.gluster.org/en/latest/Administrator%20Guide/Setting%20Up%20Clients/#auto-nfs
 
 Example mount:
-sudo mount -t nfs4 node_ip:/glustervol /path_to_mount
+sudo mount -t nfs4 node_ip:/glustervol /path\_to\_mount
 
 
 
-## **Automated Testing Method**
+## Automated Testing Method
 
 
 ### **Simple Volumes**
@@ -237,7 +234,7 @@ If the value of the variable **GEORED** will be 1, we will check the status of a
 
 
 
-### Utils
-https://docs.gluster.org/en/latest/Administrator%20Guide/Setting%20Up%20Volumes/
+## Utils
+[Setting up GlusterFS volumes](https://docs.gluster.org/en/latest/Administrator%20Guide/Setting%20Up%20Volumes/)
 
-https://access.redhat.com/documentation/en-us/red_hat_gluster_storage/3.1/html/administration_guide/sect-disaster_recovery
+[GlusterFS Disaster Recovery](https://access.redhat.com/documentation/en-us/red_hat_gluster_storage/3.1/html/administration_guide/sect-disaster_recovery)

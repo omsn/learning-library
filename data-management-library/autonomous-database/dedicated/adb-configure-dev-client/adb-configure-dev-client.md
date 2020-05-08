@@ -18,7 +18,7 @@ As a database user, DBA or application developer,
 ### Required Artifacts
 
 - An Oracle Cloud Infrastructure account with IAM privileges to provision compute instances
-- A pre-provisioned dedicated autonomous database instance. Refer [Lab 4](./../adb-provisioning-databases/adb-provisioning-databases.md) on how provision an ATP database.
+- A pre-provisioned dedicated autonomous database instance. Refer [Lab 4](?lab=lab-4-provisioning-databases) on how provision an ATP database.
 - VNC Viewer or other suitable VNC client on your local laptop
 
 
@@ -72,7 +72,7 @@ Let's first download the DB wallet to your local machine (laptop) and then scp /
 
 - From your local browser, navigate to OCI console.
 
-- On the ATP console, select the dedicated ATP instance provisioned in [Lab 4](./../adb-provisioning-databases/adb-provisioning-databases.md).
+- On the ATP console, select the dedicated ATP instance provisioned in [Lab 4](?lab=lab-4-provisioning-databases).
     ![](./images/doneprovision.png " ")
 
 - Click on  *DB Connection* to open up Database Connection pop-up window.
@@ -154,7 +154,7 @@ First we shh into the dev client and invoke the VNC server that comes pre-instal
 **Windows Users**
   - Windows 10 users can use powershell to connect using command above.
 
-  - Alternatively, you may create and ssh tunnel using putty. Detailed instructions on using putty for ssh tunnels are provided in the [Appendix](./Appendix.md).
+  - Alternatively, you may create and ssh tunnel using putty. Detailed instructions on using putty for ssh tunnels are provided in the [Appendix](?lab=appendix).
 
   You now have a secure ssh tunnel from your local laptop to your developement system in OCI on VNC port 5901.
 
@@ -277,4 +277,4 @@ First we shh into the dev client and invoke the VNC server that comes pre-instal
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer
 - **Last Updated By/Date** - Yaisah Granillo, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 

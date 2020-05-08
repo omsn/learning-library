@@ -1,8 +1,0 @@
-{
-    "tutorials": [
-        {
-            "title": "Connect SQL Developer to an Oracle Cloud Infrastructure VM Database",
-            "filename": "connect-oci-vm-db-sqldeveloper.md"
-        }
-    ]
-}

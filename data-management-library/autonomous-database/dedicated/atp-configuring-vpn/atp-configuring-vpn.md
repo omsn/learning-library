@@ -18,7 +18,7 @@ As a network or fleet admin,
 
 - An Oracle Cloud Infrastructure account with privileges to create compute instance and network resources
 - A pre-provisioned dedicated autonomous database instance in a private network
-- A pre-provisioned Virtual Cloud Network with public and private subnets setup with appropriate security lists. Refer to [Lab 1](./ATPD-Networking.md).
+- A pre-provisioned Virtual Cloud Network with public and private subnets setup with appropriate security lists. Refer to [Lab 1](?lab=lab-1-prepare-private-network).
 
 
 The following illustration shows a network topology that can be used to provide secure access to your dedicated autonomous infrastructure.
@@ -30,14 +30,14 @@ The following illustration shows a network topology that can be used to provide 
 
 - Security lists have been setup such that tcp traffic into the private exadata subnet is allowed only through hosts in the public subnet. This can be further tightened by allowing traffic from specific hosts and ports. 
 
-- For detailed instructions on network setup for an dedicated autonomous DB infrastructure, refer to [Lab 1](ATPD-Networking.md).
+- For detailed instructions on network setup for an dedicated autonomous DB infrastructure, refer to [Lab 1](?lab=lab-1-prepare-private-network).
 
 
 ## STEP 1: Launch a CentOS VM for the OpenVPN server
 
 - Login to the Oracle Cloud Infrastructure using your tenancy, userId and password. 
 
-    Refer to [Lab 1](ATPD-Networking.md) for detailed instructions on logging into your OCI account.
+    Refer to [Lab 1](?lab=lab-1-prepare-private-network) for detailed instructions on logging into your OCI account.
 
 - Once logged in, Click on *Create Instance*.
     ![](./images/createCompute.png " ")
@@ -145,7 +145,7 @@ You may also setup your VPN server with multiple users. Follow the OpenVPN confi
     *Note: Your SQL Developer version needs to be 18.3 or higher to connect to a cloud database using a wallet.*
         ![](./images/atpd_conn.png " ")
     
-- Follow detailed instructions on downloading your database credentials wallet refer to [Lab 4](ProvisionADB.md.) 
+- Follow detailed instructions on downloading your database credentials wallet refer to [Lab 4](?lab=lab-4-provisioning-databases) 
 
 - You may also connect to APEX or SQL Developer Web directly from your local browser. Simply get the URL from the console and launch in a browser window.
     ![](./images/atpd_application_apex.png " ")
@@ -158,4 +158,4 @@ You may also setup your VPN server with multiple users. Follow the OpenVPN confi
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer
 - **Last Updated By/Date** - Yaisah Granillo, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 

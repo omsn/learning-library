@@ -14,6 +14,8 @@ There are 2 resource manager stacks (zip archives) in this framework:
 - **enterprise_tier** (containing IAM, Network, Compute, Load Balancers, Block & Object Storage, ADW/ATP, DNS, File System Service)
 For more details on how to run the stacks, click on the title.
 
+### [Click for Lightning Workshop](https://oracle.github.io/learning-library/solutions-library/infrastructure-automation/lightning/workshop/index.html)
+
 ## [Thunder](./thunder/README.md)
 Thunder is a Terraform/Python based framework containing multiple examples on how to quickly spin up different components in OCI. It is meant for both production environments and proof of concepts, due to the fact that is fully customizable. 
 

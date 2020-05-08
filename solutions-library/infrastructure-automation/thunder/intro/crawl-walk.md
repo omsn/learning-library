@@ -4,6 +4,8 @@
 
 All of the examples from crawl and walk work on the same principle.
 In both of these folders there are independent examples for different OCI Components.
+
+## Code Walkthrough 
 After setting up the **provider.auto.tfvars**, you will have to check out the **terraform.tfvars** files for each of the examples in crawl and walk.
 In all of these examples, there will be some external dependencies, that you will have to fill in.
 
@@ -69,9 +71,15 @@ vcn_params = {
 }
 ```
 
-All the mappings between all the resources are made by name and all of them will have a parameter that does the linking. Everything can be easily scaled up, just by adding another map in the params of the resources you are interested in (as you've seen in the example above).
+All the mappings between all the resources are made by name and all of them will have a parameter that does the linking. All the names of a resource type (e.g vcn), should be unique, in order to be able to spin them up and make the links with other resources.
+Everything can be easily scaled up, just by adding another map in the params of the resources you are interested in (as you've seen in the example above).
 
 Some of these independent examples will have more than one external variable, but all of them are easily spotted at the beginning of their corresponding README.md file.
+
+
+### Running the Code
+
+There are examples for both **crawl** and **walk** phases. Each component will have its own section on how to run the code, and you will find it at the end of the lab.
 
 ### Crawl 
 

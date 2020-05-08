@@ -140,7 +140,7 @@ In this part, you will use these features in the Dynamic Action you created in t
 
     The action should appear as follows.
 
-    ![](images/show-javascript.png)
+    ![](images/show-javascript-2.png)
 
 11. Set the **Fire on Initialization** attribute to **Yes**.
 
@@ -176,7 +176,11 @@ In addition to Dynamic Actions, there are various attributes at the page and com
 
 3.  Save your changes and run the home page with the browser console open. You should see a message when the `doWork` function is invoked. While this simple example doesn't do anything functional, you'll learn more about the types of things you can do in the next module.
 
+    ![](images/console-open.png)
+
 4.  Navigate to **Reports** > **Sales by Category**. Currently, colors assigned to categories in the chart are randomly selected. You will add JavaScript code that explicitly sets the colors to different shades of green.
+
+    ![](images/sales-by-category.png)
 
 5.  Navigate to the Page Designer for page 16 and drill down on the **Attributes** of the **Sales by Category** region. Scroll down through the properties until you come to **JavaScript Initialization Code**, then copy the following function to that field.
 
@@ -196,7 +200,11 @@ In addition to Dynamic Actions, there are various attributes at the page and com
 
     This anonymous function accepts an options object and modifies it by adding a `dataFilter` function. The `dataFilter` function gives each series in the chart an explicit color.
 
+    ![](images/sales-by-category-2.png)
+
 6.  Save your changes and rerun the page. You should see the same chart but with green colors now.
+
+    ![](images/sales-by-category-3.png)
 
 ## **Part 4:** Using Static Files
 
@@ -224,15 +232,23 @@ In the last part, you added JavaScript code directly to page and component level
 
 2.  Navigate to the **Shared Components** > **Static Application Files**. Click **Upload File**, use the **File(s)** item to pick the **sample-db-app.js** file created in the previous step, and then click **Upload**. Note the string in the **Reference** column for the newly uploaded file: **#APP_IMAGES#sample-db-app.js**. You will make use of that in the proceeding steps.
 
+    ![](images/uploaded-file.png)
+
 3.  Navigate to the Page Designer for page 16 and drill down on the **Attributes** of the **Sales by Category** region. Replace the value in **JavaScript Initialization Code** with just: `styleSalesByCatChart`
+
+    ![](images/sales-by-category-4.png)
 
     Note that the function does not have parenthesis on the end. That makes it a reference to the function declared in the file rather than an invocation of the function. APEX will invoke the function at the appropriate time.
 
 4.  Select the page-level attributes (root node under the rendering tab) and put the following file reference in the **File URL(s)** item in the **JavaScript** section: **#APP_IMAGES#sample-db-app.js**
 
+    ![](images/javascript-file-reference.png)
+
 5.  Save your changes and run the page. The chart should be styled with shades of green as before, only now the responsible JavaScript is defined in the static file. If the function were generic enough, it could be used elsewhere in the application.
 
 6.  Navigate to the Page Designer for page 1 and drill down on the page level attributes. Clear the value in the **Function and Global Variable Declaration** field and add the following file reference in the File URL(s) item in the JavaScript section: **#APP_IMAGES#sample-db-app.js**
+
+    ![](images/javascript-file-reference-2.png)
 
 7.  Save your changes and run the page. You should see the same message from the `doWork` function as before, only now the function is defined in the static file.
 

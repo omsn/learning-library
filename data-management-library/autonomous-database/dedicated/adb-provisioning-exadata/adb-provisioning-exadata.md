@@ -16,6 +16,9 @@ As a fleet administrator,
 - An Oracle Cloud Infrastructure account with service limits to deploy at least one 1/4 rack of Exadata Infrastructure in any one region or Availability Domain.
 - You also need privileges to create Autonomous Exadata Infrastructure and a container database in a pre-provisioned compartment and network.
 
+Watch the video below for an overview of creating an Autonomous Container Database
+
+[](youtube:0iL-zyMziOM)
 
 ## STEP 1: Deploy your Autonomous Exadata Infrastructure (AEI)
 
@@ -57,4 +60,4 @@ You also have two options for selecting the license type for the database contai
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer
 - **Last Updated By/Date** - Yaisah Granillo, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 

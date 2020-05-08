@@ -47,7 +47,7 @@ Rather than having two ways to maintain milestone records, you will delete the o
 4. Click **Interactive Grid**.
 5. On the Add Interactive Grid Page, enter the following:
     - Page Name - enter **Milestones**
-    - Table - select **SAMPLE$PROJECT_MILESTONES**
+    - Table - select **EBA_PROJECT_MILESTONES**
     
     - Click **Add Page**  
 
@@ -62,13 +62,13 @@ Rather than having two ways to maintain milestone records, you will delete the o
 
 
 ### **Part 4** - Add the Status Page
-The **SAMPLE$PROJECT_STATUS** table is used to maintain project statuses. This table should be maintainable, however, only application administrators should be able to modify records. As such adding the page under Administration is the optimal solution.
+The **EBA_PROJECT_STATUS** table is used to maintain project statuses. This table should be maintainable, however, only application administrators should be able to modify records. As such adding the page under Administration is the optimal solution.
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Interactive Grid**.
 3. On the Add Interactive Grid Page, enter the following:
     - Page Name - enter **Statuses**
-    - Table - select **SAMPLE$PROJECT_STATUS**
+    - Table - select **EBA_PROJECT_STATUS**
     - Expand **Advanced**
         - Click **Set as Administration Page** 
     

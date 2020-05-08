@@ -51,4 +51,4 @@ You may now proceed to the next lab.
 
 - **Last Updated By/Date** - Kay Malcolm, Director, DB Product Mgmt, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 

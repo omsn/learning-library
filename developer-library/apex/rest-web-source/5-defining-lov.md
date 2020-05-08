@@ -117,11 +117,11 @@ You now have the Web Source modules which can be used as the basis for List of V
 ### **Part 3** – Update the Form
 If you review the Maintain Employee form page more closely you will see that the Department Number (DEPTNO) and the Manager (MGR) item are both numeric items and expect the end user to know the relevant numbers, rather than select from a list of names.
 
-1. From the Lists of Values page, in the Application Builder toolbar, click **Edit Page 3**.
+1. From the Lists of Values page, in the Application Builder toolbar, click **Edit Page 5**.
 
     ![](images/5/go-page3.png)
 
-2. From Page Designer, in the Rendering tree (left pane), click **P3_DEPTNO**.
+2. From Page Designer, in the Rendering tree (left pane), click **P5_DEPTNO**.
 
     In the Property Editor (right pane), enter the following:
     
@@ -133,7 +133,7 @@ If you review the Maintain Employee form page more closely you will see that the
     ![](images/5/set-deptno.png)
     ![](images/5/set-deptno2.png)
 
-3. From Page Designer, in the Rendering tree (left pane), click **P3_MGR**.
+3. From Page Designer, in the Rendering tree (left pane), click **P5_MGR**.
 
     In the Property Editor (right pane), enter the following:
     
@@ -149,7 +149,7 @@ If you review the Maintain Employee form page more closely you will see that the
 ### **Part 4** – Update the Report
 Similarly, the Employees report shows numerical values rather than names.
 
-1. Navigate to Page 2 in Page Designer.     
+1. Navigate to Page 4 in Page Designer.     
     In the Page Designer toolbar, use the Page Selector or the down arrow next to the page number.
 
     ![](images/5/go-page2.png)

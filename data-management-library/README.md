@@ -1,45 +1,63 @@
-![](common-template/img/data-management-title.png)
+![](./images/data-management-title.png)
+
+The Oracle Data Management Github is the central location for workshops related to all things Autonomous Database (ADB), Database, Big Data, Data Integration, Machine Learning, Security and more.  Across multiple deployment options:  on-premises and in the cloud.  
+
+- [Autonomous Database](./autonomous-database) 
+- [Database and Database 19c](./database) 
+- [Oracle Machine Learning](./oracle-machine-learning) 
+- [Security](./security) 
+
+## Autonomous Database (ADB) 
+- [Autonomous Database on Shared Infrasructure Workshop](https://oracle.github.io/learning-library/data-management-library/autonomous-database/shared/workshops/freetier-overview/)
+
+- [Autonomous Database on Dedicated Infrasructure Workshop](https://oracle.github.io/learning-library/data-management-library/autonomous-database/dedicated/workshop/)
 
 
-The Oracle Data Management Library is the central location for workshops related to all things Autonomous Database (ADB), Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  
+## For Developers
+- [Building Microservices with Oracle's Converged Database](https://oracle.github.io/learning-library/developer-library/microservices-with-converged-db)
+- [JSON](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/json-freetier) 
 
-To get started, choose one (or more!) of the defined learning paths below:
+- [Python](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/python-freetier) 
+- [Containerized Development on the Oracle Database](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker/freetier) 
 
-## **Autonomous Database Workshop Library Highlights**
+- [Create a Database in a Docker Container](https://oracle.github.io/learning-library/data-management-library/database/docker/create-database-in-docker) 
 
-|  | OOW19 Drop-in Zip Labs|
-| ------------- | ------------- |
-| ![autonomous-database/ziplabs](common-template/img/oow.png)  | Drop-In labs are short (15-20 mins), self-paced, hands-on labs for the Oracle Cloud. Choose from several labs to explore Autonomous Database using Oracle Trial accounts.   **[Click here to launch the lab series](autonomous-database/ziplabs)**  |
-|  |**Autonomous Database Certification Labs**|
-| ![autonomous-database/certification](common-template/img/autonomousdb.png) | An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge required to provision, manage, and migrate to Autonomous Transaction Database (ATP) and Autonomous Data Warehouse (ADW).  It is designed for database administrators, monitors, and Dev Ops admins who want to validate their knowledge and skills. To learn more about this certification click [here](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19).  The Database PM team partnered with OSPA to create a series of labs to support the certification. **[Click here to launch the lab series](autonomous-database/certification)** |
-| | **ADW Journey Workshop**|
-| ![autononmous-database/autonomous-data-warehouse/journey4-adwc](common-template/img/adb.png) | Provision an ADW instance, run queries, load data, manage, scale and use various tools against the ADW instance (Oracle Machine Learning SQL Notebooks, Data Visualization Desktop and Data Integration Platform Cloud). **[Click here to launch the lab](https://www.oracle.com/goto/adw/tutorial)**
-| | **ADB Dedicated Workshop**|
-| ![autonomous-transaction-processing/dedicated](common-template/img/autonomousdb.png) | Provision Exadataa in a private OCI network, an Autonomous Container Database and databases on your dedicated Exadata Infrastructure.  Build and deploy Python, node.js and Java applications stacks on dedicated autonomoous, use OCI cli commands and more! **[Click here to launch the lab](autonomous-transaction-processing/dedicated/README.md)**
- 
+- [Create a Database on OCI VM ](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/create-oci-vm-db) 
 
+## Database 
+- [New Features for Developers](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/freetier/index.html)  
 
-## **Security Workshop Library Highlights**
+- [Spatial](https://oracle.github.io/learning-library/data-management-library/database/spatial/freetier/index.html)
 
-|  | OOW19 Data Safe Labs|
-| ------------- | ------------- |
-| ![security/data-safe/](common-template/img/security.png)| Practice the main features in Oracle Data Safe, including Activity Auditing, Data Discovery, Data Masking, User Assessment, and Security Assessment.   **[Click here to launch the lab series](security/data-safe)**  |
+- [Multitenant Fundamentals](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  
 
+- [In-Memory Fundamentals](https://oracle.github.io/learning-library/data-management-library/database/in-memory/freetier/index.html) 
 
+- [Hybrid Partitioning](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/hybridpart-freetier) 
 
-## **Develop on ADB Library Highlights**
+- [Automatic Indexing](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/autoindex-freetier) 
 
-|  | OOW19 APEX Labs|
-| ------------- | ------------- |
-| ![autonomous-database/ziplabs/2019/atp-apex-spreadsheet-app](common-template/img/apex-apps-512.png) |  Upload a spreadsheet into an Oracle database table and create an application based on this new table. You will then play with the Interactive Report and improve the attached form. Lastly add a Calendar page and then link it to the existing form page.   **[Click here to launch the lab series](autonomous-database/ziplabs/2019/atp-apex-spreadsheet-app)**  |
+- [Connect SQL Developer to OCI VM Database](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/create-oci-vm-db/) 
 
-## **Database Tools Library Highlights**
+  
+## Oracle Machine Learning (OML) 
+[![](./images/omlgithub.png)](./oracle-machine-learning) 
+- [Machine Learning on Autonomous Database](https://oracle.github.io/learning-library/data-management-library/oracle-machine-learning/adb-oml/workshop/)
+  
+## Security 
+- [Data Safe](https://github.com/kaymalcolm/learning-library/blob/master/data-management-library/security/data-safe)
 
-New Library coming soon!
+## Certifications ##
 
-## Helpful Links ##
+**Autonomous Database Cloud Specialist Certification** - [Learn More](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19)
 
-**Autonomous Database Cloud Specialist Certification** - [Learn More]([here](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19))
+## Videos
+- [Oracle Database Product Management YouTube Channel](https://www.youtube.com/channel/UCr6mzwq_gcdsefQWBI72wIQ)
+
+## Issues?
+Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page.  We review it regularly.  Make sure to include the name of the workshop when submitting.
+
+-- Oracle Database Product Management
 
 
 

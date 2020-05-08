@@ -63,10 +63,7 @@ Oracle Functions is a fully managed, highly scalable, on-demand, Functions-as-a-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
-
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -397,7 +394,7 @@ Click **Create**
 ```bash
 fn init --runtime java <FUNCTION_NAME>
 ```
-A directory called <FUNCTION_NAME>-func is created, containing:
+A directory called <FUNCTION_NAME> is created, containing:
 
 a function definition file called func.yaml
 a /src directory containing source files and directories for the <FUNCTION_NAME> function
@@ -405,7 +402,7 @@ a Maven configuration file called pom.xml that specifies the dependencies requir
 
 32. Next we will deploy the function. Change directory to the <FUNCTION_NAME> directory created in the previous step
 ```bash
-cd <FUNCTION_NAME>-func
+cd <FUNCTION_NAME>
 ```
 
 33. Enter the following single Fn Project command to build the function and its dependencies as a Docker image called <FUNCTION_NAME>, push the image to the specified Docker registry, and deploy the function to Oracle Functions in the <NAME> used when **Create Application** was used. Enter command;

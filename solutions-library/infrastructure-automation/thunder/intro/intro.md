@@ -10,12 +10,109 @@ In the span of a few days or hours, the code examples provided here establish an
 Why bother with creating all the infrastructure manually, or creating all the terraform code from scratch when the only thing that you will have to modify in order to achieve the desired infrastructure is a **terraform.tfvars** file?
 
 Solutions in this framework are split between multiple examples containing both terraform and python automations.
+The examples are organized as follows:
 
+<table>
+  <tr>
+    <th width="10">Type</th>
+    <th width="200">Description</th>
+    <th width="10">C1</th>
+    <th width="10">C2</th>
+    <th width="10">C3</th>
+    <th width="10">C4</th>
+    <th width="10">C5</th>
+    <th width="10">C6</th>
+    <th width="10">C7</th>
+    <th width="10">C8</th>
+  </tr>
+  <tr>
+    <td><a href="?lab=lab-4-crawl-walk">crawl</td>
+    <td>Independent examples for OCI's basic resources</td>
+    <td>adw_atp</td>
+    <td>dbaas</td>
+    <td>iam</td>
+    <td>instances</td>
+    <td>network</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href="?lab=lab-4-crawl-walk">walk</td>
+    <td>Independent examples for OCI's advanced resources</td>
+    <td>dns</td>
+    <td>fss</td>
+    <td>instance-principal</td>
+    <td>load-balancer</td>
+    <td>object-storage</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href="?lab=lab-5-free-tier">free_tier</td>
+    <td>Contains the always free components</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href="?lab=lab-6-enterprise-tier">enterprise_tier</td>
+    <td>Contains all crawl and walk terraform components</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href="?lab=lab-7-run-examples">run</td>
+    <td>Different examples that may help you get proficient experience on OCI.</td>
+    <td>backup-restore</td>
+    <td>glusterfs</td>
+    <td>grafana</td>
+    <td>start-stop</td>
+    <td>asg</td>
+    <td>remote-peering</td>
+    <td>kms</td>
+    <td>waas</td>
+  </tr>
+  <tr>
+    <td><a href="?lab=lab-8-network-architectures">network architectures</td>
+    <td>Contains network architecture examples</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+    <tr>
+    <td><a href="?lab=lab-9-custom-images">custom images</td>
+    <td>Contains custom images examples</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## Acknowledgements
 
 **Authors/Contributors** - Flavius Dinu, Ionut Sturzu, Ionut Irimia, Cristian Cozma, Marius Ciotir, Sorin Ionescu, Laura Paraschiv, Travis Mitchell, Thomas Liakos 
 
 **Last Updated By/Date** - Flavius Dinu, April 2020
-
-**Workshop Expiration Date** - April 30, 2021

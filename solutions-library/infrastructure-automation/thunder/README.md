@@ -107,6 +107,18 @@ The examples are organized as follows:
     <td>-</td>
     <td>-</td>
   </tr>
+  <tr>
+    <td><a href=./examples/custom_images/custom-images.md>custom images</td>
+    <td>Contains custom images examples</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
 </table>
 
 All the phases will need an oci provider which can be defined in the terraform.tfvars or *.auto.tfvars file in every component and the values must reflect your OCI tenancy:

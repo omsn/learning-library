@@ -86,7 +86,7 @@ The form page for editing records also needs some improvement.
 1. Click the edit icon on a row.
     The Form Page is displayed
 
-    In the Developer Toolbar, click **Edit Page 3**.     
+    In the Developer Toolbar, click **Edit Page 5**.     
     Page Designer will be displayed for the current page.
 
     ![](images/4/go-pd.png)
@@ -95,7 +95,7 @@ The form page for editing records also needs some improvement.
 
 2. The Employee Number (EMPNO) item is currently hidden, as it is defined as the primary key for the table. However, users should be able to enter a value when inserting a record.
 
-    Within Page Designer, in the Rendering tab (left pane), click item **P3_EMPNO**
+    Within Page Designer, in the Rendering tab (left pane), click item **P5_EMPNO**
 
     In the Property Editor (right pane), enter the following:
     
@@ -106,16 +106,16 @@ The form page for editing records also needs some improvement.
 
 3. Employee Number should only be entered and should not be updated, as it is the primary key for the table. Therefore, you should make the item read only if displaying an existing record.
 
-    In the Property Editor (right pane), with **P3_EMPNO** selected, enter the following:
+    In the Property Editor (right pane), with **P5_EMPNO** selected, enter the following:
     - Read Only > Type - select **Item is NOT NULL**
-    - Read Only > Item - select **P3_EMPNO**
+    - Read Only > Item - select **P5_EMPNO**
 
     ![](images/4/set-empno-ro.png)
     
 4. The Job and Name items are currently defined as a Textarea, yet neither will be that large a value. Therefore, they should be changed to be a Text Field.
 
-    In the Rendering tab (left pane), click item **P3_JOB**.        
-    Hold the {Control} Key and click **P3_NAME**.
+    In the Rendering tab (left pane), click item **P5_JOB**.        
+    Hold the {Control} Key and click **P5_NAME**.
     
     In the Property Editor (right pane), for Identification > Type, select **Text Field**
 
@@ -123,18 +123,18 @@ The form page for editing records also needs some improvement.
 
 5. The order of the items should be improved. This can easily be achieved by dragging and dropping items in either the Rendering tree or the Layout.
 
-    In the Rendering tree, click item **P3_ENAME**.      
-    Drag **P3_ENAME** up to be under **P3_EMPNO**.  
+    In the Rendering tree, click item **P5_ENAME**.      
+    Drag **P5_ENAME** up to be under **P5_EMPNO**.  
 
     ![](images/4/drag-name.png)
     
-6. In the Rendering tab (left pane), click item **P3_DEPTNO**.      
-    Drag **P3_DEPTNO** up to be under **P3_ENAME**.
+6. In the Rendering tab (left pane), click item **P5_DEPTNO**.      
+    Drag **P5_DEPTNO** up to be under **P5_ENAME**.
     
 7. The Commission (COMM) item should be placed on the same line as Salary (SAL).
 
-    In Layout (middle pane), select **P3_COMM**.        
-    Drag it up next to **P3_SAL**   
+    In Layout (middle pane), select **P5_COMM**.        
+    Drag it up next to **P5_SAL**   
     *{Note: Do not drop the item until a large dark yellow box appears to the right of the existing items.}*
 
     In the Toolbar, click **Save**

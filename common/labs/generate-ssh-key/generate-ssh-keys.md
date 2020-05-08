@@ -1,38 +1,40 @@
-# SSH Key Creation
+# Create SSH Keys
 
 ## Introduction
 
 The SSH (Secure Shell) protocol is a method for secure remote login from one computer to another. SSH enables secure system administration and file transfers over insecure networks using encryption to secure the connections between end points.  SSH Keys are an important part of securely accessing OCI compute instances in the cloud.    
 
-If you already have an ssh key pair, you may use that to connect to your environment.  We recommend you use the Oracle Cloud Shell to connect to your instance.  However if you prefer to connect via your laptop, please choose based on your configuration.
+If you already have an ssh key pair, you may use that to connect to your environment.  We recommend you use the Oracle Cloud Shell to interface with the Oracle Cloud compute instance you will create.  It is browser based, does not require installation or configuration of anything on your laptop and works independent of your network setup.  However if you prefer to connect via your laptop, please choose based on your configuration.
 
-*IMPORTANT:  If the ssh key is not created correct, you will not be able to connect to your environment and will get errors.  Please ensure you create your key properly.* 
+*IMPORTANT:  If the ssh key is not created correct, you will not be able to connect to your environment and will get errors.  Please ensure you create your key properly.*
 
 
 ## Option 1:  Oracle Cloud Shell
 
-The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console. Cloud Shell comes with a pre-authenticated OCI CLI, set to the Console tenancy home page region, as well as up-to-date tools and utilities. To use the Cloud Shell machine, your tenancy administator must grant the required IAM policy.
+The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console. Cloud Shell comes with a pre-authenticated OCI CLI, set to the Console tenancy home page region, as well as up-to-date tools and utilities. To use the Cloud Shell machine, your tenancy administrator must grant the required IAM policy.
 
 1.  To start the Oracle Cloud shell, go to your Cloud console and click the cloud shell icon to the right of the region.
 
-    ![](./images/cloudshell.png " ") 
+    ![](./images/cloudshellsetup.png " ")
 
-2.  Once the cloud shell has started, enter the following command.  Do not enter a passphrase, press Enter twice.
+    ![](./images/cloudshell.png " ")
+
+2.  Once the cloud shell has started, enter the following command.  Choose a key name you can remember. This will be the keyname you will use to connect to any compute instances you create. Do not enter a passphrase, press Enter twice.
     ````
     mkdir .ssh
     cd .ssh
     ssh-keygen -b 2048 -t rsa -f <<sshkeyname>>
     ````
-    ![](./images/cloudshell-ssh-keygen.png " ") 
-    ![](./images/cloudshell-ssh-keygen-2.png " ") 
+    ![](./images/cloudshell-ssh-keygen.png " ")
+    ![](./images/cloudshell-ssh-keygen-2.png " ")
 
 3.  Examine the two files that you just created.
     ````
     ls
     ````
-    ![](./images/examine-cloudshell-keys.png " ") 
+    ![](./images/examine-cloudshell-keys.png " ")
 
-4.  When pasting the key into the compute instance in future labs, make sure that you remove any hard returns that may have been added when copying.  *The *.pub key should be one line.*
+4.  When pasting the key into the compute instance in future labs, make sure that you remove any hard returns that may have been added when copying.  *The .pub key should be one line.*
 
 ## Option 2:  MacOS
 
@@ -80,11 +82,11 @@ Creating keys for Windows can be interesting as ```ssh-keygen``` was not a nativ
 4.  Confirm that your keys exist and were created properly.   Enter the following commands in the Powershell window.
 
     ```
-    
+
     cd .ssh
     ls
     cat id_rsa.pub
-    
+
     ```
 
     ![](images/keylab-007.png " ")
@@ -161,7 +163,7 @@ In earlier versions of Windows, ssh-keygen was not a native utility so third par
     Once installed, you should have an entry in your Windows Start menu, and perhaps a desktop shortcut for PuTTy.  PuTTy is a actually a suite of secure communication utilities.  We'll be using two of them, the PuTTy utility for terminal access and the PuTTygen utility for generating a secure SSH key.
 
 3.   Open the Windows start menu and navigate to the PuTTy folder.  Select the PuTTygen utility.
-    ![](images/keylab-014.png " ") 
+    ![](images/keylab-014.png " ")
 
 4.  Verify that the defaults are selected and the key type should be RSA set at 2048 bits.   Click on the **Generate** button.
 
@@ -183,7 +185,7 @@ In earlier versions of Windows, ssh-keygen was not a native utility so third par
 
     ![](images/keylab-018.png " ")
 
-8.  Next you'll need to save the private key.   Click the **Save private key** button, answer **Yes** to the warning about saving without a passphrase. 
+8.  Next you'll need to save the private key.   Click the **Save private key** button, answer **Yes** to the warning about saving without a passphrase.
 
     ![](images/keylab-019.png " ")
 
@@ -192,7 +194,7 @@ In earlier versions of Windows, ssh-keygen was not a native utility so third par
     ![](images/keylab-020.png " ")
 
 10.  Now that you've saved the keys for future reference, all you have to do is copy the key information from the PuTTy dialog.  
-11.  Select the key text in the dialog box from start to finish, then right click and choose **Copy**.  You can then paste the key into a Notepad or directly into the instance creation dialog in the OCI console. 
+11.  Select the key text in the dialog box from start to finish, then right click and choose **Copy**.  You can then paste the key into a Notepad or directly into the instance creation dialog in the OCI console.
 [](images/keylab-021.png " ")
 
 1.   Below is an example of the **Add SSH Key - Paste SSH Keys** dialog in the OCI instance creation form.
@@ -257,9 +259,9 @@ Follow the below instructions to connect to a cloud instance via SSH using the P
 4.  Use the Linux ```cat``` command to list the contents of id_rsa.pub.
 
     ```
-    
+
     cat id_rsa.pub
-    
+
     ```
     ![](images/keylab-003.png " ")
 
@@ -279,4 +281,4 @@ You have created a public/private SSH key pair and can utilize it in any of the 
 * **Last Updated By/Date** - Kay Malcolm, Director, Database Product Management, March 27, 2020
 * **Workshop (or Lab) Expiry Date** - March 27, 2021
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.

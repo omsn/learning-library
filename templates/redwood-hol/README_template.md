@@ -24,8 +24,8 @@ If you don't have an Oracle Cloud account then you can quickly and easily sign u
 - $300 of free credits good for up to 3500 hours of Oracle Cloud usage
 - Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
 - Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
-  
-Click here to request your trial account: https://cloud.oracle.com/tryit
 
-### Self-Paced Labs 
+Click here to request your trial account: http://oracle.com/cloud/free
+
+### Self-Paced Labs
 Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in real cloud environments. You can try self-paced labs here: https://ocitraining.qloudable.com/

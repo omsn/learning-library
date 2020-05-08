@@ -10,7 +10,7 @@ Click on one of our workshops below to access the content.
 
 
 - [I have a Freetier or Oracle Cloud account](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)
-- [I have an account from SSWorkshop](https://oracle.github.io/learning-library/data-management-library/database/multitenant/ssworkshop/index.html)
+- [I have an account on LiveLabs](https://oracle.github.io/learning-library/data-management-library/database/multitenant/ssworkshop/index.html)
 
 
 ## Get an Oracle Cloud Trial Account for Free!

@@ -12,7 +12,7 @@
 This lab assumes you have completed the following labs:
 * Lab: Login to Oracle Cloud
 * Lab: Generate SSH Key
-* Lab: Environment Setup
+* Lab: Setup
 
 ### Lab Preview
 
@@ -21,7 +21,28 @@ Watch the video below to get an explanation of enabling the In-Memory column sto
 [](youtube:dZ9cnIL6KKw)
 
 
-## Step 1: Logging In and Enabling In-Memory
+## Step 1: Run the In-Memory Setup Scripts
+1.  Run this command to setup the schema, SSB, you will use for this lab.   This script takes about 15 minutes to complete.   It downloads the ssb.dmp file and then imports it.
+    ````
+    <copy>
+    cd /home/opc/
+    wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/axp5T8m0cF0_p1N832Qo6ImwczP_V6bSQi9ABLti6Ug/n/c4u03/b/labfiles/o/inmemoryscript.sh
+    chmod +x /home/opc/inmemoryscript.sh
+    nohup /home/opc/inmemoryscript.sh &> setupinmem.out&
+    </copy>
+    ````
+    ![](./images/ssbexists.png " ") 
+
+2.  To check the status of the script above run the command below.   You can also use the unix **jobs** command to see if the script is still running.  *Note:  Ignore the error that the SSB User exists, that is expeted.  The script should finish with 1 error*
+
+    ````
+    <copy>
+    tail -f /home/opc/setupinmem.out
+    </copy>
+    ````
+    ![](./images/inmemcomplete.png " ") 
+
+## Step 2: Logging In and Enabling In-Memory
 
 1.  All scripts for this lab are stored in the labs/inmemory folder and are run as the oracle user.  Let's navigate there now.  We recommend you type the commands to get a feel for working with In-Memory. But we will also allow you to copy the commands via the COPY button.
 
@@ -78,7 +99,7 @@ Watch the video below to get an explanation of enabling the In-Memory column sto
     ````
      ![](images/step1num4.png) 
 
-## Step 2: Enabling In-Memory
+## Step 3: Enabling In-Memory
 
 The Oracle environment is already set up so sqlplus can be invoked directly from the shell environment. Since the lab is being run in a pdb called orclpdb you must supply this alias when connecting to the ssb account. 
 
@@ -169,7 +190,7 @@ By default the IM column store is only populated when the object is accessed.
     ````
      ![](images/step2num6.png) 
 
-7. Background processes are populating these segments into the IM column store.  To monitor this, you could query the V$IM_SEGMENTS.  Once the data population is complete, the BYTES_NOT_POPULATED should be 0 for each segment.  
+7. Background processes are populating these segments into the IM column store.  To monitor this, you could query the V\$IM\_SEGMENTS.  Once the data population is complete, the BYTES\_NOT\_POPULATED should be 0 for each segment.  
 
     ````
     <copy>
@@ -217,4 +238,4 @@ You may now proceed to the next lab.
 - **Author** - Andy Rivenes, Sr. Principal Product Manager, Oracle Database In-Memory
 - **Last Updated By/Date** - Kay Malcolm, Director, DB Product Management, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.    Please include the workshop name and lab in your request. 

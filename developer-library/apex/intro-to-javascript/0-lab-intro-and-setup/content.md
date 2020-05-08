@@ -6,7 +6,7 @@ Welcome to the Introduction to JavaScript for APEX Developers hands-on lab. For 
 
 APEX developers only need to know a little bit of JavaScript to have a significant impact, and that's what this hands-on lab is all about! You'll start by learning some of the basics of JavaScript, then learn how to add JavaScript to APEX apps, and finally, you'll learn to use jQuery to work with the DOM.
 
-Before continuing to the first module, follow the steps below to create an APEX workspace using the free tier in Oracle Cloud. If you already have a workspace you'd like to use, you may [proceed to the first module](?module=javascript-basics).
+Before continuing to the first module, follow the steps below to create an APEX workspace using the free tier in Oracle Cloud. If you already have a workspace you'd like to use, you may [proceed to the first module](?lab=module-1-javascript-basics).
 
 **Lab Modules**
 
@@ -22,7 +22,7 @@ In this part, you will sign up for an Oracle Cloud trial account. Trial accounts
 
 1.  If you already have an Oracle Cloud trial account (or regular account), you may skip to the next part.
 
-2.  Please <a href="http://bit.ly/Javascript_APEX_HOL" target="_blank">click this link to create your free account</a>. 
+2.  Please <a href="http://bit.ly/Javascript_APEX_HOL" target="_blank">click this link to create your free account</a>.
 
 3.  Soon after requesting your account you will receive the following email. Once you receive this email you may proceed to Part 2.
 
@@ -64,7 +64,7 @@ In this part, you will create an instance of the Autonomous Transaction Processi
 
     After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance. Continue to the next part when the status changes from:
 
-    ![](images/status-provisioning.png) 
+    ![](images/status-provisioning.png)
 
     to:
 
@@ -87,7 +87,7 @@ When you first access APEX you will need to log in as an APEX instance administr
     ![](images/log-in-as-admin.png)
 
 4.  Click **Create Workspace**.
-  
+
    ![](images/welcome-create-workspace.png)
 
 5.  Enter the following details and click **Create Workspace**.
@@ -97,11 +97,11 @@ When you first access APEX you will need to log in as an APEX instance administr
     | Database User | **DEMO** |
     | Password | **`SecretPassw0rd`** |
     | Workspace Name | **DEMO** |
-  
+
     ![](images/create-workspace.png)
 
-6.  Click the **DEMO** link in the success message. This will log you out of APEX administration so that you can log into your new workspace. 
-	
+6.  Click the **DEMO** link in the success message. This will log you out of APEX administration so that you can log into your new workspace.
+
     ![](images/log-out-from-admin.png)
 
 7.  Enter **`SecretPassw0rd`** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
@@ -115,5 +115,5 @@ When you first access APEX you will need to log in as an APEX instance administr
     ![](images/lab-intro.png)
 
 2. Click **Module 1: Create an ATP instance**.
-  
+
     ![](images/lab-contents.png)

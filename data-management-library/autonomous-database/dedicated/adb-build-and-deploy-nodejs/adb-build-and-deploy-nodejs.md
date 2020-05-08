@@ -18,13 +18,13 @@ As an application developer,
 
 - An Oracle Cloud Infrastructure account.
 
-- A pre-provisioned instance of Oracle Developer Client image in an application subnet. Refer to [Lab 6](ConfigureDevClient.md).
+- A pre-provisioned instance of Oracle Developer Client image in an application subnet. Refer to [Lab 6](?lab=lab-6-configuring-vpn-into-private-atp).
 
-- A pre-provisioned dedicated autonomous database instance. Refer to [Lab 4](./ProvisionADB.md).
+- A pre-provisioned dedicated autonomous database instance. Refer to [Lab 4](?lab=lab-4-provisioning-databases).
 
-- A network that provides connectivity between the application and database subnets. Refer to [Lab 1](./ATPD-Networking.md).
+- A network that provides connectivity between the application and database subnets. Refer to [Lab 1](?lab=lab-1-prepare-private-network).
 
-## STEP 1: Download sample node.js application
+## STEP 1: Instance Setup
 
 - Login to your Oracle Cloud Infrastructure account select *Compute* —>  *Instances* from top left menu.
     ![](./images/Compute1.png " ")
@@ -180,4 +180,4 @@ And finally, lets edit the dbconfig.js file in /home/opc/ATPDnode/ATPDnode-maste
 - **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer
 - **Last Updated By/Date** - Yaisah Granillo, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 

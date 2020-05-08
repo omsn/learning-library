@@ -1,6 +1,6 @@
 # Module 4 - Improving the Report
 
-In this module, you will learn how to manipulate an Interactive Report to improve the data displayed and make it easier for users to analyze the data. 
+In this module, you will learn how to manipulate an Interactive Report to improve the data displayed and make it easier for users to analyze the data.
 
 ## Background Information
 Now you have data loaded into the BIG\_MAC\_INDEX table you can start reviewing the local price of a McDonalds Big Mac and the exchange rate with the US Dollar.
@@ -28,12 +28,12 @@ and then select **Database Applications**.
 
     ![](images/4/go-page2.png)
 
-4. Within Page Designer, in the Rendering tree (left pane), under Content Body, click **Mac Indexes** (This is the report region)
+4. Within Page Designer, in the Rendering tree (left pane), under Content Body, click **Big Mac Indexes** (This is the report region)
 
     In the Property Editor (right pane), enter the following:
     - Source > Type - select **SQL Query**
     - Source - SQL Query - click the **Code Editor** icon, and cut and paste the following -
-    
+
         ```
         select  ID,
                 COUNTRY_NAME,
@@ -63,7 +63,7 @@ Individual report columns need a better format mask to properly display the data
 
 1. In the Rendering tree (left pane), click **Columns**
     Within the list of columns, click **LOCAL_PRICE**
-    
+
     In the Property Editor (right pane), click the select icon for
 Appearance > Format Mask
     In the Pick Format Mask dialog, select **5,234.10**
@@ -75,7 +75,7 @@ Appearance > Format Mask
     In the Property Editor (right pane), click the select icon for
 Appearance > Format Mask
     In the Pick Format Mask dialog, select **5,234.1000**
-    
+
 3. In the Rendering tree (left pane), within the list of columns, click **RELATIVE\_EXCHANGE_RATE**
 
     In the Property Editor (right pane), click the select icon for
@@ -87,47 +87,47 @@ Appearance > Format Mask
 Given the data is obtained from an external source (The Economist REST API) users of the application should not update or delete existing records, and should not create new records.
 
 1. Remove the edit icon so end users cannot update or delete records.
-    
+
     In the Rendering tree (left pane), under Columns, click **Attributes**.
     In the Property Editor (right pane), for Link > Link Column, select **Exclude Link Column**.
-    
+
     ![](images/4/remove-edit.png)
 
 2. Remove the Create button so end users cannot add new records.
 
-    In the Rendering tree (left pane), under Region Buttons, _right-click_ **CREATE**, and select **Delete (Del)**. 
-    
+    In the Rendering tree (left pane), under Region Buttons, _right-click_ **CREATE**, and select **Delete (Del)**.
+
     ![](images/4/del-create.png)
-    
+
 3. It is best, but not mandatory, to remove the Big Mac Index form page altogether.     
     Before moving to Page 3 it is necessary to save the changes you made on Page 2.
 
     In the Page Designer toolbar, with Page 2 selected, click **Save**.     
     In the Page Designer toolbar, use the page selector, or down arrow, to navigate to **Page 3 - Big Mac Index**.
-    
+
     ![](images/4/go-page3.png)
 
-4. On Page 3: Big Mac Index, in the Page Designer toolbar, click **Utilities** (wrench), and then select **Delete Page**. 
-    
+4. On Page 3: Big Mac Index, in the Page Designer toolbar, click **Utilities** (wrench), and then select **Delete Page**.
+
     ![](images/4/del-page.png)
-    
+
 5. On the Confirm Page Delete page, click **Permanently Delete Page**.
 
     *{Note: Page Designer will return to displaying _Page 1: Home_.}*
-    
+
 ### **Part 4** – Resequence the Report Columns
 To resequence the order in which the columns are displayed you need to run the report, and then rearrange the column order in the runtime environment.
 
 1. In the Page Designer Toolbar, click **Save and Run**
 
 2. In the runtime environment, click **Actions**, then click **Columns**
-    
+
     ![](images/4/go-columns.png)
 
 3. In the Select Columns Dialog, select **Entry Date**, and then click **Top**
 
     Click **Apply**  
-    
+
     ![](images/4/move-columns.png)
 
 ### **Part 5** – Add a Computation
@@ -136,14 +136,14 @@ Rather than adding an additional column to the SQL Query for the region, it is a
 The report contains the Dollar Exchange Rate and Relative Exchange Rate columns. If you subtract the Dollar Exchange Rate from the Relative Exchange Rate and then divide that by the Dollar Exchange Rate, you can calculate the valuation of the currency. It is best to display this as a percentage by multiplying the result by 100.
 
 1. In the runtime environment, click **Actions**, select **Data**, then click **Compute**
-    
+
     ![](images/4/go-compute.png)
 
 2. In the Compute dialog, enter the following:
     - Column Label - enter **Difference %**
     - Format Mask - select **5,234.10**
     - Computation Expression - enter ```(I – F) * 100 / F```
-    
+
     Click **Apply**  
 
     ![](images/4/set-compute.png)
@@ -154,7 +154,7 @@ The report contains the Dollar Exchange Rate and Relative Exchange Rate columns.
 Currently the changes you have made in the runtime environment can only be seen by you. Further, if you were to log out of the runtime environment and log back in your changes would be lost. In order for everyone to see the revised report you need to save the report as the "Primary" report.
 
 1. In the runtime environment, click **Actions**, select **Report**, then click **Save Report**  
-    
+
     ![](images/4/go-save.png)
 
 2.  In the Save Report dialog, for Save (Only displayed for developers), select **As Default Report Settings**.

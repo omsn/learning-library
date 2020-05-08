@@ -24,7 +24,7 @@ In this module, you will learn how to install sample tables and views from Sampl
 
     ![](images/2/go-object-browser.png)
 
-3. Click on the tables starting with **SAMPLE$** and the various tabs, such as Data, Constraints, and so forth, to review the table details.  
+3. Click on the tables starting with **EBA_** and the various tabs, such as Data, Constraints, and so forth, to review the table details.  
 
     ![](images/2/review-tables.png)
 

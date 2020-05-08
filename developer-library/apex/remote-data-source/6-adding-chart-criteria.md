@@ -12,7 +12,7 @@ In order for the chart to properly utilize the updated value in the select list,
 
 ### **Part 1** – Add a Page Item
 
-1. From the Runtime environment, in the Developer Toolbar (bottom of the screen), click **Edit Page 7**
+1. From the Runtime environment, in the Developer Toolbar (bottom of the screen), click **Edit Page 4**
 
 2. Within Page Designer, in the Gallery (center pane, below Layout), click **Items**
     Click **Select List** and hold the mouse down.
@@ -22,9 +22,9 @@ In order for the chart to properly utilize the updated value in the select list,
     ![](images/6/drop-item.png)
 
 3. In the Property Editor (right panel), update the following:
-  - Identification > Name - enter **P7_COUNTRY**
+  - Identification > Name - enter **P4_COUNTRY**
   - List of Values > Type - select **SQL Query**
-  - List of Values > SQL Query - cut and paste the following: 
+  - List of Values > SQL Query - cut and paste the following:
 
       ~~~~sql
   select distinct country_name d, iso r  
@@ -41,18 +41,18 @@ In order for the chart to properly utilize the updated value in the select list,
 ### **Part 2** – Add a Dynamic Action
 In order for the chart to be refreshed when a country is selected from the new item a Dynamic Action must be defined.
 
-1. In the Rendering tree (left pane), right click on **P7_COUNTRY**, select **Create Dynamic Action**  
+1. In the Rendering tree (left pane), right click on **P4_COUNTRY**, select **Create Dynamic Action**  
 
     ![](images/6/go-da.png)
 
-2. In the Property Editor (right pane), for Identification > Name, enter **Refresh Chart** 
+2. In the Property Editor (right pane), for Identification > Name, enter **Refresh Chart**
 
     ![](images/6/name-da.png)
 
 3. In the Rendering tree (left pane), under Dynamic Actions > True, click **Show**
 
     In the Property Editor (right pane), enter the following:
-    
+
     - Identification > Action - select **Refresh**
     - Affected Elements > Selection Type - select **Region**
     - Affected Elements > Region - select **Country Chart**
@@ -65,21 +65,21 @@ To ensure the value from the item can be used it must be set in session state. R
 
 1. In the Rendering tree (left pane), under Content Body, click **Chart**
 
-    In the Property Editor (right pane), for Source > Page Items to Submit, select **P7_COUNTRY**
+    In the Property Editor (right pane), for Source > Page Items to Submit, select **P4_COUNTRY**
 
     ![](images/6/set-chart.png)
 
 2. In the Rendering tree (left pane), under Series, click **Dollar Exchange Rate**
 
-    In the Property Editor (right pane), for Source > SQL Query, replace **'AUS'** with **:P7_COUNTRY**
+    In the Property Editor (right pane), for Source > SQL Query, replace **'AUS'** with **:P4_COUNTRY**
 
     ![](images/6/set-series.png)
 
 3. In the Rendering tree (left pane), under Series, click **Relative Exchange Rate**
-    In the Property Editor (right pane), for Source > SQL Query, replace **'AUS'** with :**P7_COUNTRY**
+    In the Property Editor (right pane), for Source > SQL Query, replace **'AUS'** with :**P4_COUNTRY**
 
 4. In the Rendering tree (left pane), under Series, click **Percentage Difference**
-    In the Property Editor (right pane), for Source > SQL Query, replace **'AUS'** with :**P7_COUNTRY**
+    In the Property Editor (right pane), for Source > SQL Query, replace **'AUS'** with :**P4_COUNTRY**
 
 ### **Part 4** – Improve the Chart Page
 
@@ -87,7 +87,7 @@ To ensure the value from the item can be used it must be set in session state. R
 2. In the Runtime environment, select different Countries.
 
     ![](images/6/runtime.png)
-    
+
 3. Reviewing the runtime environment the region name should be hidden. This can be done from the runtime environment using Live Template Options.
 
     In the runtime environment, within the Developer Toolbar, click **Quick Edit**.

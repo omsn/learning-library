@@ -1,6 +1,6 @@
 # Module 5 - Adding a Chart
 
-In this module, you will learn how to add a chart page to the application. 
+In this module, you will learn how to add a chart page to the application.
 
 ### Background Information
 The Big Mac Index includes data for countries over the last 20 years. Therefore, to better visualize trends in a country's exchange rate over time it would be highly beneficial to create a chart that is country specific.
@@ -24,7 +24,7 @@ Initially you will create a chart that displays the Dollar Exchange Rate for Aus
 4. In the Page and Region Attributes dialog, enter the following:
     - Page Name - enter **Country Chart**
     - Breadcrumb - select **Breadcrumb**
-    
+
     Click **Next**  
 
     ![](images/5/set-name.png)
@@ -38,7 +38,7 @@ Initially you will create a chart that displays the Dollar Exchange Rate for Aus
 6. In the Source dialog, enter the following:
     - Source Type - click **SQL Query**
     - SQL Query - cut and paste the following:
-    
+
         ```
         select entry_date
         , dollar_exchange_rate
@@ -53,7 +53,7 @@ Initially you will create a chart that displays the Dollar Exchange Rate for Aus
 7. In the Column Mapping dialog, enter the following:
     - Label Column - select **ENTRY_DATE**
     - Value Column - select **DOLLAR\_EXCHANGE_RATE**
-    
+
     Click **Create**
 
     ![](images/5/set-columns.png)
@@ -72,12 +72,12 @@ As can be seen by the appearance of the first cut of the chart, there is work to
 
     ![](images/5/quick-edit.png)
 
-    Alternatively, navigate back to the APEX Application Builder tab or window, and then navigate to Page 7.
+    Alternatively, navigate back to the APEX Application Builder tab or window, and then navigate to Page 4.
 
 2. Within Page Designer, in the Rendering tree (left pane), under **Chart**, click **Attributes**
 
     In the Property Editor (right pane), enter the following:
-    
+
     - Settings > Time Axis Type - select **Mixed Frequency**
     - Legend > Show - click **Yes**  
 
@@ -108,10 +108,10 @@ Time to update the existing chart line (series), and add a few more data series.
 
     In the Rendering tree (left pane), under **Chart**, click the second series.    
     In the Property Editor (right pane), enter the following:
-    
+
     - Identification > Name - enter **Relative Exchange Rate**
     - Source > SQL Query, copy and paste the following:
-    
+
         ```
         select entry_date
         , (local_price / (select local_price from big_mac_index u
@@ -131,7 +131,7 @@ Time to update the existing chart line (series), and add a few more data series.
 
     In the Rendering tree (left pane), under **Chart**, click the third series.    
     In the Property Editor (right pane), enter the following:
-    
+
     - Identification > Name - enter **Percentage Difference (Y2)**
     - Source > SQL Query, cut and paste the following:
 
@@ -140,7 +140,7 @@ Time to update the existing chart line (series), and add a few more data series.
         , ((  local_price / (select local_price from big_mac_index u
                              where u.entry_date = l.entry_date
                              and u.iso = 'USA'
-                            ) 
+                            )
             - dollar_exchange_rate
            ) * 100 / dollar_exchange_rate
           ) percentage_difference

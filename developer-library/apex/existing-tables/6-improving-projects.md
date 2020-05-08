@@ -23,7 +23,7 @@ Looking at the Projects card region you should notice it is only 3 cards wide an
     ![](images/6/live-template.png)
 
 ### **Part 2** - Adding a Form Page
-Currently there is no way to maintain project records. Therefore, you will use the **Create Page Wizard** to create a form page on the **SAMPLE$PROJECTS** table.
+Currently there is no way to maintain project records. Therefore, you will use the **Create Page Wizard** to create a form page on the **EBA_PROJECTS** table.
 
 1. Navigate back to the App Builder  by clicking **Application xxxxx** in the Developer Toolbar, or by navigating back to the App Builder browser tab manually.
 2. On the application home page, click **Create Page**.
@@ -52,7 +52,7 @@ Currently there is no way to maintain project records. Therefore, you will use t
 
     ![](images/6/navigation-menu.png)
 
-7. For Table/ View Name, select **SAMPLE$PROJECTS (table)**.    
+7. For Table/ View Name, select **EBA_PROJECTS (table)**.    
     Click **Next**.
 
     ![](images/6/data-source.png)  
@@ -120,7 +120,7 @@ Now to link this new page to the Project cards page.
     
 ### **Part 4** - Update How Items are Displayed
 The way the Status, Name, and Project Lead are displayed can be easily improved. 
-The **STATUS_ID** item is a foreign key to the **SAMPLE$PROJECT_STATUS** table. Therefore, rather than requiring end users to enter a number, you will update the item to be a list of values based on the lookup table. The Name and Project Lead fields should be updated to Text Fields. Lastly, the audit columns should be hidden.
+The **STATUS_ID** item is a foreign key to the **EBA_PROJECT_STATUS** table. Therefore, rather than requiring end users to enter a number, you will update the item to be a list of values based on the lookup table. The Name and Project Lead fields should be updated to Text Fields. Lastly, the audit columns should be hidden.
 
 1. First you need to change the Status item from a number entry to a list of allowable values.   
     From the Runtime environment, from the Project form page, in the Developer Toolbar, click **Edit Page 10**.  
@@ -134,7 +134,7 @@ The **STATUS_ID** item is a foreign key to the **SAMPLE$PROJECT_STATUS** table. 
     - List of Values > Type - select **SQL Query**
     - SQL Query enter:      
         ```select code d, id r```   
-        ```from sample$project_status```    
+        ```from eba_project_status```    
         ```order by display_order```
     
     *{Note: The _code_ column is the value displayed to users, while the _id_ column is the value returned to the table column. The table includes a _display\_order_ column to ensure the statuses are displayed in the correct order}*    

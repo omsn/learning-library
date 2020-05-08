@@ -1,4 +1,6 @@
 # Remote peering
+
+## Introduction
 This project will build a VCN peering relation between 2 VCNs in different regions. This is useful when the 2 VCNs need to communicate with each other.
 
 An important thing to remember is that VCNs with overlapping CIDR addresses cannot be paired.
@@ -49,15 +51,15 @@ The remote-peering module is able to create a peering relationship between VCNs 
 * provider_path parameter - the path of the file with the oci provider details
 
 * VCN parameters
-  * compartment_name - The name of the compartment in which the VCN will be created
-  * display_name - The name of the vcn
-  * vcn_cidr - The cidr block of the vcn
-  * dns_label - The dns label of the vcn
+    * compartment_name - The name of the compartment in which the VCN will be created
+    * display_name - The name of the vcn
+    * vcn_cidr - The cidr block of the vcn
+    * dns_label - The dns label of the vcn
 
 * Remote peering parameters
-  * compartment_name - The compartment name in which the VCNs were created
-  * vcn_name_requestor - The name of the VCN from the first region
-  * vcn_name_acceptor - The name of the VCN from the second region
+    * compartment_name - The compartment name in which the VCNs were created
+    * vcn\_name\_requestor - The name of the VCN from the first region
+    * vcn\_name\_acceptor - The name of the VCN from the second region
  
 ## Example
 In the provided example, the following resources are created:
@@ -103,6 +105,7 @@ rpg_params = [
 
 ## Running the code
 
+Go to thunder->examples->run->remote-peering
 ```
 # Run init to get terraform modules
 $ terraform init
@@ -115,8 +118,9 @@ $ terraform destroy
 ```
 
 ## Useful Links
-https://docs.cloud.oracle.com/en-us/iaas/Content/Network/Tasks/VCNpeering.htm
-https://docs.cloud.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm
+[VCN Peering Overview](https://docs.cloud.oracle.com/en-us/iaas/Content/Network/Tasks/VCNpeering.htm)
+
+[Remote VCN Peering](https://docs.cloud.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm)
 
 ## Known issues
 **At the moment, there are no known issues**

@@ -38,13 +38,13 @@ For more information about loading data, see the documentation [Loading Data fro
 
 ### Required Artifacts
 
--   The following lab requires an Oracle Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+-   The following lab requires an <a href="https://www.oracle.com/cloud/free/" target="\_blank"> Oracle Cloud account</a>. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
 In Steps 1 to 3, you will create one ADW table, CHANNELS_LOCAL, and load it with sample data from your local file system. In the remaining steps, you will create several ADW tables and load them with sample data that you stage to an OCI Object Store.
 
 ### Lab Prerequisites
 
-This lab assumes you have completed the *Login to Oracle Cloud* and *Provision ADB* labs.
+This lab assumes you have completed the [Login to Oracle Cloud] (?lab=lab-1-login-oracle-cloud) and [Provision ADB] (?lab=lab-2-provision-adb) labs seen in the menu on the right.
 
 
 ## STEP 1: Download Sample Data and Create Local Table
@@ -157,7 +157,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
 2. Take a look at the URL you copied. In this example above, the **region name** is us-ashburn-1, the **Namespace** is idthydc0kinr, and the **bucket name** is ADWCLab.
 
-    *Note:The URL can also be constructed as below:*
+    *Note: The URL can also be constructed as below:*
 
     `https://objectstorage.<`**region name**`>.oraclecloud.com/n/<`**namespace name**`>/b/<`**bucket name**`>/o`
 
@@ -167,9 +167,13 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
 To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will need an OCI user with the appropriate privileges to read data (or upload) data to the Object Store. The communication between the database and the object store relies on the native URI, and the OCI user Auth Token.
 
-1. Go back to the **Autonomous Data Warehouse Console** in your browser. From the pull-out menu on the top left, under **Identity**, click **Users**.
+1. Locate your menu bar and click on the **person icon** at the far upper right.  From the drop-down menu, select your **user's name** (remember this username could be an email).
 
-    ![](./images/Create_Swift_Password_01.jpg " ")
+    ![](./images/navigate-to-auth-token-2.png " ")
+
+    ![](./images/navigate-to-auth-token.png " ")
+
+    *Note: If you don't see your user name in the drop-down menu, you might be a "federated" user. In that case, go instead to the menu on the left side and open Users. Federated users are “federated” from another user service, whether it is an Active Directory LDAP type service or users from the older OCI Classic.
 
 2. Click the **user's name** to view the details.  Also, remember the username as you will need that in the next step. This username could also be an email address.
 
@@ -199,7 +203,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 In order to access data in the Object Store you have to enable your database user to authenticate itself with the Object Store using your OCI object store account and Auth token. You do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 
 1. Connected as your user in SQL Developer Web, copy and paste <a href="./files/create_credential.txt" target="\_blank">this code snippet</a> to a SQL Developer Web worksheet.
-   
+
 2. Specify the credentials for your Oracle Cloud Infrastructure Object Storage service: The username will be your **OCI username** (usually your email address, not your database username) and the password is the OCI Object Store **Auth Token** you generated in the previous step.  In this example, the credential object named **OBJ\_STORE\_CRED** is created. You reference this credential name in the following steps.
 
     ![](./images/create_credential_sql_dev_web.jpg " ")
@@ -267,9 +271,14 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
 Please proceed to the next lab.
 
+## Want to Learn More?
+
+Click [here](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/load-data.html#GUID-1351807C-E3F7-4C6D-AF83-2AEEADE2F83E) for documentation on loading data into an autonomous database.
+
 ## Acknowledgements
 
 - **Author** - Nilay Panchal, ADB Product Managemnt
-- **Last Updated By/Date** - Richard Green, DB Docs Team, March 2020
+- **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
+- **Last Updated By/Date** - Richard Green, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.

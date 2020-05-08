@@ -72,15 +72,13 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+3. Choose **VCN with Internet Connectivity** and click **Start Workflow**
 
-4. Choose **VCN with Internet Connectivity** and click **Start Workflow**
-
-5. Fill out the dialog box:
+4. Fill out the dialog box:
 
 
 - **VCN NAME**: Provide a name
@@ -90,13 +88,13 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
 - Click **Next**
 
-6. Verify all the information and  Click **Create**
+5. Verify all the information and  Click **Create**
 
-7. This will create a VCN with followig components.
+6. This will create a VCN with followig components.
 
 **VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
 
-8. Click **View Virtual Cloud Network** to display your VCN details.
+7. Click **View Virtual Cloud Network** to display your VCN details.
               
               
 ## Create Public Private SSH Key Pair, two compute instances and install web server

@@ -36,7 +36,7 @@ In this module, you will learn how to create the initial app based on existing t
 
 ### **Part 3** – Add the Dashboard Page
 
-A dashboard page is a great way to show important information using various charts. When you created the Sample Dataset it also created a view **SAMPLE$PROJECTS_V**, which joins data from various tables. This view is ideal as the basis for the dashboard charts.
+A dashboard page is a great way to show important information using various charts. When you created the Sample Dataset it also created a view **EBA_PROJECTS_V**, which joins data from various tables. This view is ideal as the basis for the dashboard charts.
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Dashboard**.
@@ -46,7 +46,7 @@ A dashboard page is a great way to show important information using various char
 - For Chart 1, enter the following:
    - Chart Type – select **Bar**
    - Chart Name – enter **Budget versus Cost**
-   - Table or View – select **SAMPLE$PROJECTS_V**
+   - Table or View – select **EBA_PROJECTS_V**
    - Label Column – select **NAME**
    - Value Column – select **BUDGET\_V_COST**
 
@@ -55,7 +55,7 @@ A dashboard page is a great way to show important information using various char
 - Click **Chart 2**, and enter the following:
    - Chart Type – select **Pie**
    - Chart Name – enter **Project Status**
-   - Table or View – select **SAMPLE$PROJECTS_V**
+   - Table or View – select **EBA_PROJECTS_V**
    - Label Column – select **Status**
    - Type – select **Count**  
 
@@ -64,7 +64,7 @@ A dashboard page is a great way to show important information using various char
 - Click **Chart 3**, and enter the following:
    - Chart Type – select **Bar**
    - Chart Name – enter **Project Leads**
-   - Table or View – select **SAMPLE$PROJECTS_V**
+   - Table or View – select **EBA_PROJECTS_V**
    - Label Column – select **PROJECT_LEAD**
    - Type – select **Count**
 - Click **Add Page**  
@@ -74,7 +74,7 @@ A dashboard page is a great way to show important information using various char
     *{Note: You have not set any values for _Chart 4_, therefore, it will be generated with a chart based on demo data. In a later module we will remove the additional chart.}*
 
 ### **Part 5** – Add the Project Page
-Card pages are especially good when there is not a huge number of records, and you only want to display a few details. The **SAMPLE$PROJECTS** table only has 12 records and would work well as a card page.
+Card pages are especially good when there is not a huge number of records, and you only want to display a few details. The **EBA_PROJECTS** table only has 12 records and would work well as a card page.
  
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Cards**.
@@ -83,7 +83,7 @@ Card pages are especially good when there is not a huge number of records, and y
 
 3. On the Add Cards Page, enter the following:
    - Page Name - enter **Projects**
-   - Table - select **SAMPLE$PROJECTS**
+   - Table - select **EBA_PROJECTS**
    - Card Title - select **NAME**
    - Description - select **Description**
    - Additional Text - select **PROJECT_LEAD**
@@ -93,7 +93,7 @@ Card pages are especially good when there is not a huge number of records, and y
     ![](images/3/set-cards.png) 
 
 ### **Part 6** - Add the Milestone Pages
-There are 30 records within **SAMPLE$MILESTONES**, therefore, you will add a report page and an associated form page.
+There are 30 records within **EBA_MILESTONES**, therefore, you will add a report page and an associated form page.
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Interactive Report**.
@@ -102,18 +102,18 @@ There are 30 records within **SAMPLE$MILESTONES**, therefore, you will add a rep
 
 3. On the Add Report Page, enter the following:
   - Page Name - enter **Milestones**
-  - Table - select **SAMPLE$PROJECT_MILESTONES**
+  - Table - select **EBA_PROJECT_MILESTONES**
   - Check **Include Form** 
   - Expand Lookup Columns
         - Lookup Key 1 - select **PROJECT_ID**
-        - Display Col 1 - select **SAMPLE$PROJECTS.NAME**
+        - Display Col 1 - select **EBA_PROJECTS.NAME**
 
   - Click **Add Page**  
 
     ![](images/3/set-milestones.png)
 
 ### **Part 7** - Add the Task Pages
-The **SAMPLE$PROJECT_TASKS** table is the primary table, where records will be reviewed and updated the most. Therefore, you will add a Faceted Search page, Report and Form pages, and a Calendar page on this table.
+The **EBA_PROJECT_TASKS** table is the primary table, where records will be reviewed and updated the most. Therefore, you will add a Faceted Search page, Report and Form pages, and a Calendar page on this table.
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Faceted Search**.
@@ -122,7 +122,7 @@ The **SAMPLE$PROJECT_TASKS** table is the primary table, where records will be r
     
 3. On the Add Faceted Search Page, enter the following:
     - Page Name - enter **Tasks Search** 
-    - Table - select **SAMPLE$PROJECT_TASKS**
+    - Table - select **EBA_PROJECT_TASKS**
 
     - Click **Add Page**  
 
@@ -141,13 +141,13 @@ The **SAMPLE$PROJECT_TASKS** table is the primary table, where records will be r
 6. Click **Interactive Report**.
 7. On the Add Report Page, enter the following:
   - Page Name - enter **Tasks**
-  - Table - select **SAMPLE$PROJECT_TASKS**
+  - Table - select **EBA_PROJECT_TASKS**
   - Check **Include Form** 
   - Expand Lookup Columns
         - Lookup Key 1 - select **PROJECT_ID**
-        - Display Col 1 - select **SAMPLE$PROJECTS.NAME**
+        - Display Col 1 - select **EBA_PROJECTS.NAME**
         - Lookup Key 2 - select **MILESTONE_ID** 
-        - Display Col 2 - select **SAMPLE$PROJECT_MILESTONES.NAME**
+        - Display Col 2 - select **EBA_PROJECT_MILESTONES.NAME**
         
     - Click **Add Page**  
 
@@ -158,7 +158,7 @@ The **SAMPLE$PROJECT_TASKS** table is the primary table, where records will be r
 9. Click **Calendar**.
 10. On the Add Calendar Page, enter the following:
   - Page Name - enter **Tasks Calendar**
-  - Table - select **SAMPLE$PROJECT_TASKS**
+  - Table - select **EBA_PROJECT_TASKS**
   - Display Column - select **NAME**
   - Start Date Column - select **START_DATE**
   - End Date Column - select **END_DATE**
@@ -167,7 +167,7 @@ The **SAMPLE$PROJECT_TASKS** table is the primary table, where records will be r
 
     ![](images/3/set-calendar.png)
     
-*{Note: If you go to SQL Workshop > Object Browser, select the _SAMPLE$PROJECT\_TASKS_ table and then click _Create App_ then it will create an app with a Dashboard page, Faceted Search page, Report and Form pages, and a Calendar page (if appropriate) all based on the selected table. This technique provides a great starting point for creating your apps, especially if you are not sure what pages you want up front.}*
+*{Note: If you go to SQL Workshop > Object Browser, select the _EBA_PROJECT\_TASKS_ table and then click _Create App_ then it will create an app with a Dashboard page, Faceted Search page, Report and Form pages, and a Calendar page (if appropriate) all based on the selected table. This technique provides a great starting point for creating your apps, especially if you are not sure what pages you want up front.}*
 
 ![](images/3/object-browser-create-app.png)
     

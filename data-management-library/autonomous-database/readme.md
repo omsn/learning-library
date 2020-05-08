@@ -1,17 +1,13 @@
 # Oracle Autonomous Database Github
 
-Oracle’s revolutionary cloud database is self-driving, self-securing, self-repairing, and designed to eliminate error-prone manual data management. Easily deploy new or move your existing OLTP and data warehouse to the cloud. The secured, intelligent, highly available database in the cloud enables you to get more value from your data to grow your business. 
+Oracle’s revolutionary cloud database is self-driving, self-securing, self-repairing, and designed to eliminate error-prone manual data management. Easily deploy new or move your existing OLTP and data warehouse to the cloud. The secured, intelligent, highly available database in the cloud enables you to get more value from your data to grow your business.
 
 ## Workshops
 Click on one of our workshops below to access the content.
 
-### ADB Shared Infrastructure
+### [Autonomous Database on Shared Infrasructure Workshop](https://oracle.github.io/learning-library/data-management-library/autonomous-database/shared/workshops/freetier-overview/)
 
-[![](./images/screenshot-adb.png)](https://oracle.github.io/learning-library/data-management-library/autonomous-database/shared/adb-journey-workshop/index.html)  ![](./images/transparent.png " ") 
-
-### ADB Dedicated Infrasructure
-
-New updated workshop coming soon!
+### [Autonomous Database on Dedicated Infrasructure Workshop](https://oracle.github.io/learning-library/data-management-library/autonomous-database/dedicated/workshop/)
 
 ## Get an Oracle Cloud Trial Account for Free!
 If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
@@ -49,5 +45,3 @@ Click here to request your trial account: [https://www.oracle.com/cloud/free](ht
 Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page.  We review it regularly.
 
 -- Oracle Database Product Management
-
-

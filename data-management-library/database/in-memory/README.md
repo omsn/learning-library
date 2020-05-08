@@ -10,7 +10,7 @@ Click on one of our workshops below to access the content.
 
 
 - [I have a Freetier or Oracle Cloud account](https://oracle.github.io/learning-library/data-management-library/database/in-memory/freetier/index.html)
-- [I have an account from SSWorkshop](https://oracle.github.io/learning-library/data-management-library/database/in-memory/ssworkshop/index.html)
+- [I have an account on LiveLabs](https://oracle.github.io/learning-library/data-management-library/database/in-memory/ssworkshop/index.html)
 
 
 ## Get an Oracle Cloud Trial Account for Free!
@@ -29,10 +29,10 @@ Click here to request your trial account: [https://www.oracle.com/cloud/free](ht
 ## Documentation
 - [Introduction to the Oracle Database In-Mamory](https://docs.oracle.com/en/database/oracle/oracle-database/19/inmem/intro-to-in-memory-column-store.html#GUID-BFA53515-7643-41E5-A296-654AB4A9F9E7)
 - [In-memory Column Store Architecture](https://docs.oracle.com/en/database/oracle/oracle-database/19/inmem/in-memory-column-store-architecture.html#GUID-EEA265EE-8FBA-4457-8C3F-315B9EEA2224)
-- [Oracle Database In-Memory YouTube Channel](https://www.youtube.com/channel/UCSYHgTG68nrHa5aTGfFH4pA)
-- [Database Product Management YouTube Channel](https://www.youtube.com/channel/UCr6mzwq_gcdsefQWBI72wIQ)
 
 ## Videos
+- [Oracle Database In-Memory YouTube Channel](https://www.youtube.com/channel/UCSYHgTG68nrHa5aTGfFH4pA)
+- [Database Product Management YouTube Channel](https://www.youtube.com/channel/UCr6mzwq_gcdsefQWBI72wIQ)
 - [Real Time Analytics with Oracle Database In-Memory](https://www.youtube.com/watch?v=eToO3PRIs8k)
 - [Managing Oracle Database In-Memory](https://www.youtube.com/watch?v=IZ7UMoQxtLo)
 - [Oracle Database In-Memory Demo](https://www.youtube.com/watch?v=mF-h26iKTYY)

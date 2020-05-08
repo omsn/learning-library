@@ -5,14 +5,6 @@ These tutorials cover how to create a Virtual Machine Database and connect to it
 **Click the image to use our easy to navigate HTML format:**
 [![Create an Oracle Cloud Infrastructure VM Database](images/create-oci-vm-db.png " ")](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/create-oci-vm-db)
 
-[![Connect SQL Developer to Oracle Cloud Infrastructure VM Database](images/connect-oci-vm-db-sqldeveloper.png " ")](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/connect-oci-vm-db-sqldeveloper)
-
-
-## Access the Labs on the Repo
-Alternatively, you can follow the labs on this repo:
-- [Create an Oracle Cloud Infrastructure VM Database](./create-oci-vm-db/content.md)
-- [Connect SQL Developer to Oracle Cloud Infrastructure VM Database](./connect-oci-vm-db-sqldeveloper/content.md)
-
 ## Oracle Cloud Account
 
 ### Trial Account

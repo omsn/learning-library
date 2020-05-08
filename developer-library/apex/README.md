@@ -21,4 +21,18 @@ Each lab is completely independent and does not rely on any other lab, therefore
 | 6 | [Low Code Development](./low-code-development) | 60 min |
 | 7 | [Introduction to JavaScript for APEX Developers](./intro-to-javascript) | 60 min |
 
+
 ***To log issues***, click here to go to the [github oracle repository](https://github.com/oracle/learning-library/issues/new) issue submission form.
+
+
+### Archived Tutorials
+| # | APEX Release | Module | Est. Time |
+| --- | --- | --- | --- |
+| 1 | APEX 19.2 | [Building an App from a Spreadsheet](./apex-192/spreadsheet) | 45 min |
+| 2 | APEX 19.2 | [Building an App on Existing Tables](./apex-192/existing-tables) | 75 min |
+| 3 | APEX 19.2 | [Building a Proof-of-Concept](./apex-192/proof-of-concept) | 60 min |
+| 4 | APEX 19.2 | [Building an App using REST Web Sources](./apex-192/rest-web-source) | 50 min |
+| 5 | APEX 19.2 | [Building an App using a Remote Data Source](./apex-192/remote-data-source) | 45 min |
+| 6 | APEX 19.2 | [Low Code Development](./apex-192/low-code-development) | 60 min |
+| 7 | APEX 19.2 | [Introduction to JavaScript for APEX Developers](./apex-192/intro-to-javascript) | 60 min |
+

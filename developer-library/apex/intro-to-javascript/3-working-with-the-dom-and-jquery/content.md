@@ -20,9 +20,9 @@ jQuery makes it easy to select elements, traverse the DOM tree, and make changes
 
 1.  Log in to your APEX Workspace and navigate to **App Builder > Sample Database Application** (installed in the previous module), then run the application and log in. You should see the home page.
 
-    ![](images/sample-database-app-home.png)
+    ![](images/sample-database-app-home.png " ")
 
-2.  Open your browser's developer tools and use them to identify the id of the text element used to search the application in the upper right-hand corner. 
+2.  Open your browser's developer tools and use them to identify the id of the text element used to search the application in the upper right-hand corner.
 
     ![](images/search-item.png)
 
@@ -32,17 +32,17 @@ jQuery makes it easy to select elements, traverse the DOM tree, and make changes
 
     ```
     $('#P1_SEARCH').attr('disabled', 'disabled');
-    ``` 
-    
+    ```
+
     Verify the code is working by trying to run a search. You should not be able to work with the item.
 
     Next, return the item to its original state by executing the following code.
 
     ```
     $('#P1_SEARCH').removeAttr('disabled');
-    ``` 
+    ```
 
-3.  Use your browsers developer tools to identify the id of the Dashboard region. 
+3.  Use your browsers developer tools to identify the id of the Dashboard region.
 
     ![](images/dashboard-region.png)
 
@@ -54,13 +54,13 @@ jQuery makes it easy to select elements, traverse the DOM tree, and make changes
 
     ```
     $('#dashboard-reg').hide();
-    ``` 
-    
+    ```
+
     Next, return the region to its original state by executing the following code.
 
     ```
     $('#dashboard-reg').show();
-    ``` 
+    ```
 
     You can also try swapping out the methods `hide` and `show` for `fadeOut` and `fadeIn` respectively.
 
@@ -68,7 +68,7 @@ jQuery makes it easy to select elements, traverse the DOM tree, and make changes
 
     ![](images/navigation-bar.png)
 
-    As you'll see, the navigation bar is made up of a `ul` element that has multiple `li` elements with links. 
+    As you'll see, the navigation bar is made up of a `ul` element that has multiple `li` elements with links.
 
     Execute the following code to add a class to the second `li` in the `ul`.
 

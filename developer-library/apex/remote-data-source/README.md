@@ -15,7 +15,7 @@ The data used is the Big Mac Index from the Economist, which uses the price of M
 * Create an application on the new data
 * Refine the application
 
-*{Note: This lab assumes you are using Oracle APEX 19.2.}*
+*{Note: This lab assumes you are using Oracle APEX 20.1.}*
 
 ## Lab Modules
 
