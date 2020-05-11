@@ -123,15 +123,7 @@ Then click the "Sign In" button.
 
     Advanced users can edit the source code directly. Changes will be reflected immediately in the designer view and vice versa.
 
-7. Rename a property in the source code view. Locate the *PROD\_DESC* property in the *PRODUCTS* vertex table and rename it *DESCRIPTION*:
-
-    ![](./images/edit-prod-desc.png " ")
-
-8. Click the *Save* icon on the top right to save the renaming:
-
-    ![](./images/save-source-edit.png " ")
-
-9. Click the *Preview* tab on the bottom left:
+7. Click the *Preview* tab on the bottom left:
 
     ![](./images/preview-tab.png " ")
 
@@ -143,23 +135,23 @@ Then click the "Sign In" button.
     
     How can we remove this vertex table from our model?
 
-10. Click on the *Designer* tab:
+8. Click on the *Designer* tab:
 
     ![](./images/designer-tab.png " ")
 
-11. Click on the *SUPPLEMENTARY\_DEMOGRAPHICS* vertex table
+9. Click on the *SUPPLEMENTARY\_DEMOGRAPHICS* vertex table
 
     ![](./images/supplemental-demographics.png " ")
 
-11. Click on the *Delete* icon on the top right:
+10. Click on the *Delete* icon on the top right:
 
     ![](./images/delete-vertex-table.png " ")
 
-12. In dialog confirming the deletion, choose *Yes*.
+11. In dialog confirming the deletion, choose *Yes*.
 
-13. Go back to *Preview* mode. You will notice the *SUPPLEMENTARY\_DEMOGRAPHICS* vertex table is gone from our visual representation of the model.
+12. Go back to *Preview* mode. You will notice the *SUPPLEMENTARY\_DEMOGRAPHICS* vertex table is gone from our visual representation of the model.
 
-14. Click *Next* on the top right:
+13. Click *Next* on the top right:
 
     ![](./images/click-for-step3.png " ")
 
