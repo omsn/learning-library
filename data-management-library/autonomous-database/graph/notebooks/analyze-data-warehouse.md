@@ -22,7 +22,7 @@ Autonomous Data Warehouse - Shared Infrastructure (ADW) or Autonomous Transactio
 
 ### Lab Prerequisites
 
-- This lab assumes you have completed the [Create a Graph from existing relational data using Graph Studio](?lab=lab-1) lab, meaning you have a graph named *SH* created in the *Graphs* page of Graph Studio.
+- This lab assumes you have completed the [Create a Graph from existing relational data using Graph Studio](?lab=lab-1-model-graph) lab, meaning you have a graph named *SH* created in the *Graphs* page of Graph Studio.
 
 ## STEP 1: Make sure the SH graph is loaded into memory.
 
