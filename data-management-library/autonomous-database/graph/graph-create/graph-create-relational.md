@@ -1,5 +1,5 @@
 
-# Create a Graph from existing relational data using Graph Studio
+# Create a graph from existing relational data using Graph Studio
 
 ## Introduction
 

@@ -7,6 +7,14 @@
             "publisheddate": "03/10/2020",
             "contentid": "graph01",
             "filename": "./../graph-create/graph-create-relational.md"
+        },
+        {         
+            "title": "Lab 2: Analyze Data Warehouse",
+            "description": "Analyze a typical data warehouse with graph algorithms in a notebook",
+            "partnumber": "graph_02",
+            "publisheddate": "03/10/2020",
+            "contentid": "graph02",
+            "filename": "./../notebooks/analyze-data-warehouse.md"
         }
     ]
 }
