@@ -45,7 +45,7 @@ Enter your ADW/ATP account credentials into the login screen:
 
 Then click the "Sign In" button.
 
-## STEP 1: Create a simple graph using PGQL
+## STEP 2: Create a simple graph using PGQL
 
 1. In the Graph Studio user interface, click on the hamburger menu on the top left corner of the screen:
 
@@ -84,7 +84,7 @@ Then click the "Sign In" button.
 
     ![](./images/execute-pgql.png " ")
 
-## STEP 2: Load the graph into memory
+## STEP 3: Load the graph into memory
 
 1. Navigate to the Graphs page:
 
@@ -104,7 +104,7 @@ Then click the "Sign In" button.
 
     ![](./images/succeeded.png " ")
 
-## STEP 3: Create your first notebook
+## STEP 4: Create your first notebook
 
 1. Navigate to the Notebooks page:
 
@@ -139,7 +139,7 @@ Then click the "Sign In" button.
 
     Markdown paragraphs are useful to add explanations to your notebooks and order them into chapters. You can embed images and even videos using Markdown or HTML syntax, give it a try.
 
-## STEP 3: Analyze, query and visualize the graph
+## STEP 5: Analyze, query and visualize the graph
 
 1. Add another paragraph to the notebook by clicking the *+* button below the first paragraph and enter the following:
 
