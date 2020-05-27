@@ -1,18 +1,26 @@
 {
     "tutorials": [
-       {         
-            "title": "Lab 1: Model a Graph",
-            "description": "Model a graph from existing relational data using Graph Studio",
+        {         
+            "title": "Lab 1: Hello World",
+            "description": "Create and analyze a graph in under 5 minutes",
             "partnumber": "graph_01",
-            "publisheddate": "03/10/2020",
+            "publisheddate": "03/27/2020",
+            "contentid": "graph01",
+            "filename": "./../hello-world/hello-world.md"
+        },
+        {         
+            "title": "Lab 2: Model a Graph",
+            "description": "Model a graph from existing relational data using Graph Studio",
+            "partnumber": "graph_02",
+            "publisheddate": "03/27/2020",
             "contentid": "graph01",
             "filename": "./../graph-create/graph-create-relational.md"
         },
         {         
-            "title": "Lab 2: Analyze Data Warehouse",
+            "title": "Lab 3: Analyze Data Warehouse",
             "description": "Analyze a typical data warehouse with graph algorithms in a notebook",
-            "partnumber": "graph_02",
-            "publisheddate": "03/10/2020",
+            "partnumber": "graph_03",
+            "publisheddate": "03/27/2020",
             "contentid": "graph02",
             "filename": "./../notebooks/analyze-data-warehouse.md"
         }

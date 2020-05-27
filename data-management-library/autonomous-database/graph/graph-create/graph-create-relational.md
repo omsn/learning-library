@@ -3,44 +3,26 @@
 
 ## Introduction
 
-In this lab you will explore Graph Studio and learn more about how you can create graphs from existing relational data stored in your 
+In this lab you will explore more of Graph Studio and learn about how you can create graphs from existing relational data stored in your 
 Autonomous Data Warehouse - Shared Infrastructure (ADW) or Autonomous Transaction Processing - Shared Infrastructure (ATP) instance.
 
 *Note: While this lab uses ADW, the steps are identical for creating and connecting to an ATP database.*
 
 ### Objectives
 
-- Learn how to connect to your autonomous database using *Graph Studio*
-- Model a graph from the Sales History (SH) sample data set
-- Monitor the graph creation job
+- Learn how to model a graph from the Sales History (SH) sample data set
+- Learn how to monitor a graph creation job
+- Learn how inspect created graphs and graph models
 
 ### Required Artifacts
 
 - The following lab requires an ADW/ATP account. You may use your own account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
-## STEP 1: Connect to your autonomous database using Graph Studio
+### Lab Prerequisites
 
-Open Graph Studio in your browser. If you do not have the URL for your Graph Studio ADW/ATP database, the URL pattern is as follows
+- This lab assumes you have completed the [Create, analyze and visualize a graph from scratch](?lab=lab-1-hello-world) lab, which explains how you can access the Graph Studio interface of your ADW instance and illustrates some basic concepts.
 
-```
-https://adb.<region_identifier>.oraclecloud.com/graphstudio/?tenant=<tenant_name>&database=<database_name>
-```
-
-For example, to access Graph Studio of database `ADW1` belonging to tenant `TENANT1` in the US Ashburn (IAD) region, open
-
-```
-https://adb.us-ashburn-1.oraclecloud.com/graphstudio/?tenant=TENANT1&database=ADW1
-```
-
-in your browser. You can find the [region identifier for all regions here](https://docs.cloud.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm).
-
-Enter your ADW/ATP account credentials into the login screen:
-
-![](./images/login.png " ")
-
-Then click the "Sign In" button.
-
-## STEP 2: Select the tables to create the graph from
+## STEP 1: Select the tables to create the graph from
 
 1. In the Graph Studio user interface, click on the hamburger menu on the top left corner of the screen:
 
@@ -76,7 +58,7 @@ Then click the "Sign In" button.
 
     ![](./images/click-for-step2.png " ")
 
-## STEP 3: Edit your graph model
+## STEP 2: Edit your graph model
 
 1. Give your newly created graph model a name and optionally a description and a few tags to identify it easier later. Then, click the *Create* button:
 
@@ -157,7 +139,7 @@ Then click the "Sign In" button.
 
     You see a summary of the model we created. All the input tables and how we want to map those to a property graph.
 
-## STEP 4: Start the graph creation job
+## STEP 3: Start the graph creation job
 
 1. Click *Create Graph* on the top right:
 
@@ -180,7 +162,7 @@ Then click the "Sign In" button.
 
     ![](./images/jobs-succeeded.png " ")
 
-## STEP 5: Inspect the created graph and model
+## STEP 4: Inspect the created graph and model
 
 1. Click on the *Graphs* menu item:
 
